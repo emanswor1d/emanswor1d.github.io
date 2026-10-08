@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Emmanuel Bakopoulos - Resume</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Schibsted+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=block">
+<style>
+@page{size:letter;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{width:8.5in;height:11in;padding:.5in .58in .45in;font-family:"Schibsted Grotesk",sans-serif;font-size:9.6pt;line-height:1.38;color:#1a1b1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+a{color:inherit;text-decoration:none}
+header{display:grid;gap:5pt;padding-bottom:11pt;border-bottom:1.5pt solid #111211}
+h1{font-family:"Archivo",sans-serif;font-weight:800;font-stretch:118%;font-size:27pt;letter-spacing:-.025em;line-height:1}
+h1 .r{color:#e1122b}
+.contact{font-family:"IBM Plex Mono",monospace;font-size:8.1pt;color:#4b4f4c;display:flex;flex-wrap:wrap;gap:0 14pt}
+.contact a{border-bottom:.6pt solid #b9beb9}
+.summary{margin-top:10pt;font-size:10pt;color:#2a2c2a;max-width:96%}
+section{margin-top:12pt}
+h2{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8pt;letter-spacing:.06em;text-transform:lowercase;color:#e1122b;padding-bottom:4pt;margin-bottom:6pt;border-bottom:.6pt solid #dcdfdb}
+.role{display:flex;justify-content:space-between;align-items:baseline;gap:10pt;margin-top:7pt}
+.role:first-of-type{margin-top:0}
+.role b{font-family:"Archivo",sans-serif;font-weight:700;font-stretch:108%;font-size:10.6pt;letter-spacing:-.01em}
+.role b span{font-weight:500;color:#4b4f4c}
+.when{font-family:"IBM Plex Mono",monospace;font-size:8pt;color:#808581;white-space:nowrap}
+.note{font-size:9pt;color:#4b4f4c;font-style:italic;margin-bottom:3pt}
+ul{list-style:none;display:grid;gap:2.6pt;margin-top:3pt}
+li{position:relative;padding-left:11pt}
+li::before{content:"";position:absolute;left:1pt;top:.58em;width:4.5pt;height:1.6pt;background:#e1122b;border-radius:1pt}
+li b{font-weight:600;color:#111211}
+</style></head><body>
+<header>
+  <h1>Emmanuel Bakopoulos<span class="r">.</span></h1>
+  <div class="contact">
+    <span>Irvington, NY</span>
+    <a href="mailto:emmanuelbakk@gmail.com">emmanuelbakk@gmail.com</a>
+    <a href="https://emanswor1d.github.io">portfolio</a>
+    <a href="https://www.linkedin.com/in/emmanuel-bak-509b44319">linkedin</a>
+    <a href="https://v2byvelare.com">v2byvelare.com</a>
+  </div>
+</header>
+<p class="summary">18. Started a clothing brand at 16 with no money, grew it to $1.27M in sales in 15 months with no outside funding, and taught myself to write the software I run it on. Finished high school in June 2026 and chose to build full time instead of going straight to college.</p>
+
+<section>
+  <h2>experience</h2>
+  <div class="role"><b>Founder, v2byVELARE <span>(Velare LLC)</span></b><span class="when">June 2025 – Present</span></div>
+  <ul>
+    <li>$1.27M in Shopify sales and 14,700+ orders since launch, no outside funding. $138K in the first full month, best month $213K and 2,500+ orders (Dec 2025)</li>
+    <li>Run every part of the business: product design, overseas manufacturing ($240K+ in production in 2026), ads, SMS, fulfillment, cash, and a 3 person contract team</li>
+    <li>Built an 89K follower Instagram and 16K person SMS list, mostly organic, and use them to launch limited drops. Best single day $45K (May 2026)</li>
+    <li>Directed $180K+ in Meta ad spend with an outside agency, set budgets and break-even targets, held around 5x revenue per ad dollar in scale months</li>
+    <li>Used sales data to cut the catalog down to proven winners: the original 6 products drove about 60% of all revenue</li>
+  </ul>
+  <div class="role"><b>Founder, VELARE <span>(first brand)</span></b><span class="when">Aug 2024 – July 2025</span></div>
+  <ul>
+    <li>Started at 16. First drop sold 2 of 100 units (my mom and a friend). Grew to about $100K in the first year</li>
+    <li>Got through $30K of inventory stuck in customs, then relaunched as v2byVELARE, which did 6x the monthly revenue</li>
+  </ul>
+</section>
+
+<section>
+  <h2>things i built</h2>
+  <p class="note">Self-taught with Python and AI coding tools (Claude Code) since January 2026. 12 projects, 40K+ lines of code.</p>
+  <ul>
+    <li><b>Drop Gate:</b> real-time waiting line for drop day (Node, Socket.io, Postgres). Load-tested to 2,583 people in line at once with 0 failures on a $5/month server, 64 automated tests</li>
+    <li><b>Content analytics engine:</b> pulls Instagram performance data through the official API on 800+ reels, tags every video, and scores which formats drive reach. Found that reach follows a power law driven by watch time, not the format I assumed</li>
+    <li><b>Cash Deck:</b> live dashboard on the Shopify Payments and Balance APIs showing cash across accounts, upcoming bills, and drop scenarios on a weekly simulator. I run the business off it</li>
+    <li><b>Trading research:</b> backtesting framework with blind holdout tests, cost modeling, and kill rules written before each test. Tested ~210K ideas; the flagship looked like +$13K on paper, lost in 5 months of forward testing, and was killed by its own predeclared rule</li>
+    <li><b>Personal AI system:</b> a structured knowledge base and agents that plan, research, and track the business overnight</li>
+  </ul>
+</section>
+
+<section>
+  <h2>other</h2>
+  <ul>
+    <li>Started Execution Group, a community of 250+ young clothing brand founders that grew out of free guides I wrote on organic marketing. Still active daily without me</li>
+    <li>Wrote a full course for new brand founders: 71 videos, about 32K words</li>
+    <li>Spoke at NYU Stern (Sep 2025) on using AI in startup marketing</li>
+    <li>Paid model and creator for 12+ streetwear brands; organized a group popup during NYFW (Feb 2026)</li>
+    <li>Donated 250+ pieces of clothing (about $20K) to shelters and youth programs</li>
+    <li>Irvington High School, graduated June 2026. Admitted to Northeastern. Varsity soccer 4 years, piano 10 years, fluent Spanish</li>
+  </ul>
+</section>
+</body></html>

@@ -1,0 +1,83 @@
+<!doctype html><html lang="en" class="js"><head><title>STAY SYNC preview</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face{font-family:'SS Display';src:url('assets/archivo-black.woff2') format('woff2')}
+@font-face{font-family:'SS Pixel';src:url('assets/silkscreen.woff2') format('woff2')}
+@font-face{font-family:'SS Arcade';src:url('assets/press-start-2p.woff2') format('woff2')}
+@font-face{font-family:'SS Mono';src:url('assets/jetbrains-mono.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'SS Mono';src:url('assets/jetbrains-mono-bold.woff2') format('woff2');font-weight:700}
+:root{--bg:#FFFFFF;--ink:#0A0A0A;--accent:#E10600;--accent-ink:#FFFFFF;--paper:#F2F2EE;--muted:#8A8A8A;--term:#0B0F0B;--phos:#39FF6A;--ga:#00F0FF;--gb:#FF00C8;--glitch:1;
+--font-mono:'SS Mono',ui-monospace,Menlo,monospace;--font-display:'SS Display','Arial Black',sans-serif;--display-weight:400;--display-style:oblique 10deg;--display-scale:1;--font-pixel:'SS Pixel',var(--font-mono);--font-arcade:'SS Arcade',var(--font-mono);--font-body:var(--font-mono);--body-size:14px;--page-width:1440px;--section-gap:48px}
+</style>
+<link rel="stylesheet" href="assets/base.css?v=5"><link rel="stylesheet" href="assets/theme.css?v=5"><link rel="stylesheet" href="assets/pages.css?v=5">
+
+</head>
+<body class="template-index glitch-medium has-scanlines">
+<script>window.SS={routes:{cart:'/cart',cart_add:'/cart/add',cart_change:'/cart/change',root:'/'},cartType:'drawer',moneyFormat:'${{amount}}',designMode:false,egg:null,welcome:'WELCOME BACK, P1',crt:'session',countryCode:'+1',strings:{added:'ADDED TO CART',soldOut:'SOLD OUT',addToCart:'ADD TO CART',unavailable:'UNAVAILABLE',copied:'LINK COPIED',error:'error'}};</script>
+<div class="crt-intro" data-crt-intro aria-hidden="true"></div>
+
+<div class="ann" data-countdown-scope style="--ann-bg:#0A0A0A;--ann-fg:#fff">
+  <div class="ann__inner page-width">
+    <div class="ann__msgs" data-rotator data-interval="4">
+      <p class="ann__msg" data-rotator-item><span class="ann__prompt">&gt;</span> <span data-rotator-text>DROP 001 // 2 PIECES ONLY</span><span class="ann__cursor blink">▮</span></p>
+      <p class="ann__msg" data-rotator-item hidden><span class="ann__prompt">&gt;</span> <span data-rotator-text>FREE SHIPPING OVER $75</span><span class="ann__cursor blink">▮</span></p>
+    </div>
+    <div class="ann__cd"><span class="ann__cd-label" data-show-state="pre">DROP 001 IN</span><span class="ann__cd-label ann__cd-label--live" data-show-state="live">▶ LIVE NOW</span>
+      <span data-show-state="pre"><div class="cd cd--plain" data-countdown data-date="2026-10-04T12:00" data-tz="-04:00" data-live-hours="48"><span class="cd__unit"><b data-cd="d">00</b><small>D</small></span><span class="cd__sep">:</span><span class="cd__unit"><b data-cd="h">00</b><small>H</small></span><span class="cd__sep">:</span><span class="cd__unit"><b data-cd="m">00</b><small>M</small></span><span class="cd__sep">:</span><span class="cd__unit"><b data-cd="s">00</b><small>S</small></span></div></span></div>
+  </div>
+</div>
+<header class="site-header site-header--sticky"><div class="site-header__inner page-width">
+  <div class="site-header__left"><button class="site-header__icon site-header__menu-btn" data-menu-toggle aria-controls="menu-h" aria-expanded="false"><svg class="icon" width="22" height="22" viewBox="0 0 16 16" fill="currentColor" shape-rendering="crispEdges"><path d="M1 3h14v2H1zM1 7h14v2H1zM1 11h14v2H1z"/></svg></button>
+    <nav class="site-nav"><a class="site-nav__link is-active" href="#">SHOP</a><a class="site-nav__link" href="#">LORE</a><a class="site-nav__link" href="#">FAQ</a></nav></div>
+  <a href="#" class="site-header__brand" data-wordmark><span class="wordmark wordmark--box glitch" data-text="STAY SYNC">STAY SYNC</span></a>
+  <div class="site-header__right"><a class="site-header__cart has-items" href="#" data-cart-open data-cart-count-wrap><svg class="icon" width="22" height="22" viewBox="0 0 16 16" fill="currentColor" shape-rendering="crispEdges"><path d="M1 2h3v1h1v6h8V4h2v6h-1v1H4v-1H3V3H1z"/><path d="M5 12h2v2H5zM11 12h2v2h-2z"/></svg><span class="site-header__count pixel">[<span data-cart-count>1</span>]</span></a></div>
+</div>
+<div class="mnav" id="menu-h"><div class="mnav__top"><span class="wordmark wordmark--box">STAY SYNC</span><button type="button" class="mnav__close" data-menu-close aria-label="Close">✕</button></div><nav class="mnav__links"><a class="mnav__link h2" href="#">SHOP ALL</a><a class="mnav__link h2" href="#">OUR STORY</a><a class="mnav__link h2" href="#">FAQ</a><a class="mnav__link mnav__link--sm pixel" href="#">CART (1)</a></nav></div></header>
+
+<main id="main">
+<section class="hero hero--tall hero--bleed hero--text-bottom" style="--hero-overlay:.2"><div class="hero__screen scan">
+  <div class="hero__media"><div class="hero__fill" style="background:repeating-linear-gradient(90deg,#c0c0c0 0 14.28%,#c0c000 0 28.56%,#00c0c0 0 42.84%,#00c000 0 57.12%,#c000c0 0 71.4%,#c00000 0 85.68%,#0000c0 0 100%)"></div></div>
+  <div class="hero__hud pixel"><span><span class="hero__live blink">●</span> LIVE CH 212</span><span>PLAY ▶ 00:02:12</span></div>
+  <div class="hero__content page-width"><h1 class="hero__title h1 glitch" data-text="STAY SYNC" data-glitch-idle>STAY SYNC</h1>
+  <div class="hero__ctas"><a class="btn btn--accent" href="#shop">SHOP ALL</a></div></div>
+</div></section>
+
+<section class="duo duo--versus" id="shop" data-duo><div class="page-width">
+  <header class="duo__head"><h2 class="duo__title h2">DROP 001</h2></header>
+  <div class="duo__stage"><div class="duo__grid" data-duo-scroller>
+    <div class="duo__slot duo__slot--tagged"><article class="card" data-duo-card><a class="card__media scan" href="#shop"><span class="card__item tag">ITEM 01/02</span><span class="card__badge tag tag--accent">NEW</span><div class="card__imgs rgb"><img class="card__img" src="tee.svg" alt=""></div></a>
+<div class="card__info"><h3 class="card__title h3"><a href="#shop">SYNC TEE</a></h3><span class="price"><span data-price>$45.00</span></span></div>
+<dl class="stats"><div class="stats__row"><dt class="pixel">WEIGHT</dt><dd>400GSM</dd></div><div class="stats__row"><dt class="pixel">FIT</dt><dd>BOXY</dd></div><div class="stats__row"><dt class="pixel">MADE</dt><dd>212 ONLY</dd></div></dl>
+<div class="hp"><span class="hp__label pixel">STOCK</span><span class="hp__bar"><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg is-on"></span><span class="hp__seg"></span><span class="hp__seg"></span><span class="hp__seg"></span></span><span class="hp__count pixel">17</span></div>
+<form class="card__quick" data-add-form><fieldset class="chips"><label class="chip"><input type="radio" name="id" value="1S"><span>S</span></label><label class="chip"><input type="radio" name="id" value="1M" checked><span>M</span></label><label class="chip"><input type="radio" name="id" value="1L"><span>L</span></label><label class="chip is-out"><input type="radio" name="id" value="1XL" disabled><span>XL</span></label></fieldset><button type="submit" class="btn btn--accent btn--block">ADD TO CART</button></form></article></div>
+    
+    <div class="duo__slot duo__slot--tagged"><article class="card" data-duo-card><a class="card__media scan" href="#shop"><span class="card__item tag">ITEM 02/02</span><span class="card__badge tag tag--accent">NEW</span><div class="card__imgs rgb"><img class="card__img" src="hoodie.svg" alt=""></div></a>
+<div class="card__info"><h3 class="card__title h3"><a href="#shop">SIGNAL HOODIE</a></h3><span class="price"><span data-price>$85.00</span></span></div>
+<dl class="stats"><div class="stats__row"><dt class="pixel">WEIGHT</dt><dd>14OZ</dd></div><div class="stats__row"><dt class="pixel">FIT</dt><dd>RELAXED</dd></div><div class="stats__row"><dt class="pixel">MADE</dt><dd>212 ONLY</dd></div></dl>
+<div class="hp"><span class="hp__label pixel">STOCK</span><span class="hp__bar"><span class="hp__seg is-on is-low"></span><span class="hp__seg is-on is-low"></span><span class="hp__seg is-on is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span><span class="hp__seg is-low"></span></span><span class="hp__count pixel">6</span></div>
+<form class="card__quick" data-add-form><fieldset class="chips"><label class="chip"><input type="radio" name="id" value="2S"><span>S</span></label><label class="chip"><input type="radio" name="id" value="2M" checked><span>M</span></label><label class="chip"><input type="radio" name="id" value="2L"><span>L</span></label><label class="chip is-out"><input type="radio" name="id" value="2XL" disabled><span>XL</span></label></fieldset><button type="submit" class="btn btn--accent btn--block">ADD TO CART</button></form></article></div>
+  </div></div>
+  
+</div></section>
+
+<section class="iwt iwt--left section"><div class="iwt__inner page-width">
+  <div class="iwt__media"><img src="hoodie.svg" alt=""></div>
+  <div class="iwt__text"><h2 class="h2">MADE BY A KID WHO GETS IT</h2><div class="rte"><p>two pieces at a time. packed by hand.</p></div><a class="btn btn--ghost" href="#">OUR STORY</a></div>
+</div></section>
+</main>
+
+<footer class="site-footer"><div class="site-footer__inner page-width">
+  <div class="site-footer__sms"><p class="site-footer__prompt pixel">&gt; GET DROP TEXTS<span class="blink">_</span></p><form class="sms" id="b" data-sms-form="x" onsubmit="event.preventDefault()"><input type="hidden" name="contact[tags]" value="sms"><div class="sms__row"><input class="field sms__phone" type="tel" placeholder="(555) 555-5555" required><button type="submit" class="btn btn--accent sms__submit">SYNC ME</button></div><label class="check sms__check"><input type="checkbox" required data-consent-box> <span>yes, text me drops</span></label><div class="sms__consent"><p>By signing up you agree to get recurring automated marketing texts from Stay Sync at this number. Consent isn't a condition of purchase. Msg &amp; data rates may apply. Reply STOP to cancel. 13+ only.</p></div></form></div>
+  <div class="site-footer__cols"><div class="site-footer__col"><p class="site-footer__head pixel">HELP</p><ul><li><a href="#">Shipping</a></li><li><a href="#">Returns</a></li><li><a href="#">Contact</a></li></ul></div></div>
+  <p class="site-footer__wm">STAY SYNC</p>
+  <div class="site-footer__legal pixel"><span>© 2026 STAY SYNC // ALL RIGHTS RESERVED</span></div>
+</div></footer>
+
+<dialog class="pop scan" data-sms-popup data-config='{"delay":3,"scroll":50,"exit":true,"days":7,"preview":false}'>
+  <div class="pop__media" data-pop-media data-src="" data-fallback="" style="--overlay:.45"></div>
+  <div class="pop__body"><div class="pop__bar pixel"><span>STAY SYNC</span><button type="button" class="pop__x" data-pop-close aria-label="Close"><svg class="icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor" shape-rendering="crispEdges"><path d="M2 2h2v2h2v2h4V4h2V2h2v2h-2v2h-2v4h2v2h2v2h-2v-2h-2v-2H6v2H4v2H2v-2h2v-2h2V6H4V4H2z"/></svg></button></div>
+  <h2 class="pop__title h2 glitch" data-text="EARLY ACCESS">EARLY ACCESS</h2><p class="pop__text">we text you before it drops.</p><form class="sms" id="c" data-sms-form="x" onsubmit="event.preventDefault()"><input type="hidden" name="contact[tags]" value="sms"><div class="sms__row"><input class="field sms__phone" type="tel" placeholder="(555) 555-5555" required><button type="submit" class="btn btn--accent sms__submit">SYNC ME</button></div><label class="check sms__check"><input type="checkbox" required data-consent-box> <span>yes, text me drops</span></label><div class="sms__consent"><p>By signing up you agree to get recurring automated marketing texts from Stay Sync at this number. Consent isn't a condition of purchase. Msg &amp; data rates may apply. Reply STOP to cancel. 13+ only.</p></div></form><button type="button" class="pop__no" data-pop-close>no thanks</button></div>
+</dialog>
+<div class="toast" data-toast role="status"></div>
+<script src="assets/theme.js?v=5" defer></script>
+</body></html>

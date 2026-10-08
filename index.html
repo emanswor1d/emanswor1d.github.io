@@ -1,0 +1,1127 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Emmanuel Bakopoulos</title><meta name="description" content="18, founder of v2byvelare. $1.27M bootstrapped apparel brand, and the software I built to run it."><meta property="og:title" content="Emmanuel Bakopoulos"><meta property="og:description" content="18, founder of v2byvelare. $1.27M bootstrapped apparel brand, and the software I built to run it."><meta property="og:image" content="https://emanswor1d.github.io/img/hero.jpg"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Schibsted+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* layout: one catalog of everything made, clothes and code. hang-tag labels in mono, wide lowercase display, real screenshots carry the page */
+:root{
+  --paper:#f3f4f2; --card:#ffffff; --ink:#111211; --ink-2:#4b4f4c; --ink-3:#808581;
+  --rule:#dcdfdb; --rule-2:#e8eae6; --red:#e1122b; --red-ink:#b80d22; --green:#1f8a4c; --amber:#a86a00;
+  --shot-bg:#e7e9e5; --bar-a:#b9beb9; --bar-b:#111211;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Schibsted Grotesk",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0e0f0e; --card:#161816; --ink:#eef0ed; --ink-2:#b3b8b3; --ink-3:#7d827d;
+  --rule:#2a2d2a; --rule-2:#202320; --red:#ff3b50; --red-ink:#ff6b7c; --green:#4cc27f; --amber:#e3a33a;
+  --shot-bg:#1d201d; --bar-a:#4a4f4a; --bar-b:#eef0ed; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0e0f0e; --card:#161816; --ink:#eef0ed; --ink-2:#b3b8b3; --ink-3:#7d827d;
+  --rule:#2a2d2a; --rule-2:#202320; --red:#ff3b50; --red-ink:#ff6b7c; --green:#4cc27f; --amber:#e3a33a;
+  --shot-bg:#1d201d; --bar-a:#4a4f4a; --bar-b:#eef0ed; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;padding-inline:clamp(16px,4vw,48px);padding-block:0 64px}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin-inline:auto}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);margin-inline:calc(-1*clamp(16px,4vw,48px));padding-inline:clamp(16px,4vw,48px)}
+.bar{max-width:1180px;margin-inline:auto;display:flex;align-items:center;gap:20px;min-height:58px;flex-wrap:wrap}
+.mark{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:17px;letter-spacing:-.01em;text-decoration:none;display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.mark .ast{color:var(--red);font-size:22px;line-height:0;position:relative;top:4px}
+nav.tabs{display:flex;gap:4px;margin-left:auto}
+nav.tabs a{font-family:var(--mono);font-size:13px;text-decoration:none;padding:6px 12px;border-radius:999px;color:var(--ink-2)}
+nav.tabs a:hover{color:var(--ink);background:var(--rule-2)}
+nav.tabs a[aria-current="page"]{color:var(--paper);background:var(--ink)}
+
+/* type */
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-3);text-transform:lowercase}
+h1,h2,h3{font-family:var(--display);font-weight:800;font-stretch:118%;letter-spacing:-.025em;line-height:1.02;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,6.2vw,76px)}
+h2{font-size:clamp(28px,4vw,46px)}
+h3{font-size:clamp(20px,2.2vw,26px);font-stretch:110%;letter-spacing:-.015em}
+p{margin:0}
+.lede{font-size:clamp(17px,1.6vw,20px);color:var(--ink-2);max-width:58ch}
+.mono{font-family:var(--mono)}
+
+section.view{padding-top:clamp(36px,6vw,72px)}
+section.view[hidden]{display:none}
+
+/* intro */
+.intro{display:grid;gap:22px;padding-bottom:clamp(32px,5vw,56px);border-bottom:1px solid var(--rule)}
+.intro h1 .r{color:var(--red)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+.facts b{color:var(--ink);font-weight:500}
+
+/* tags + status */
+.tag{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);border:1px solid var(--rule);border-radius:3px;padding:1px 7px;white-space:nowrap}
+.status{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink-3);flex:none}
+.status.live::before{background:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 22%,transparent)}
+.status.built::before{background:var(--amber)}
+.status.killed::before{background:var(--red)}
+
+/* work grid */
+.gridhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding:clamp(28px,4vw,44px) 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--rule);border-radius:6px;overflow:hidden;text-decoration:none;color:inherit;min-width:0;transition:transform .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);border-color:var(--ink-3)}
+.card .thumb{aspect-ratio:16/10;background:var(--shot-bg);overflow:hidden;position:relative;border-bottom:1px solid var(--rule)}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.card .thumb.phone{display:flex;justify-content:center;align-items:flex-start;gap:10px;padding:16px 16px 0}
+.card .thumb.phone img{width:31%;height:auto;object-fit:contain;border-radius:10px 10px 0 0;border:1px solid var(--rule)}
+.card .thumb.text{display:flex;align-items:center;justify-content:center;padding:20px}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card p{color:var(--ink-2);font-size:15px}
+.card .meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+
+/* pipeline mini (signaller) */
+.pipe{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center;font-family:var(--mono);font-size:12px}
+.pipe span{border:1px solid var(--ink-3);border-radius:3px;padding:4px 8px;background:var(--card)}
+.pipe i{font-style:normal;color:var(--ink-3)}
+
+/* detail */
+.back{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--ink-2);display:inline-flex;gap:6px}
+.back:hover{color:var(--red)}
+.dhead{display:grid;gap:16px;padding:18px 0 28px;border-bottom:1px solid var(--rule)}
+.dhead .row{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:center}
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:28px 2px 18px;margin-inline:-2px;scrollbar-width:thin}
+.gallery figure{margin:0;scroll-snap-align:start;flex:none;display:flex;flex-direction:column;gap:10px;width:min(860px,86%)}
+.gallery figure.ph{width:250px}
+.gallery figure.mid{width:min(420px,80%)}
+.shot{background:var(--shot-bg);border:1px solid var(--rule);border-radius:6px;overflow:hidden;cursor:zoom-in;padding:0;display:block;width:100%}
+.ph .shot{border-radius:22px;border:6px solid var(--ink);background:var(--ink)}
+.ph .shot img{border-radius:15px}
+figcaption{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.hint{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
+.cols{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);padding-top:28px}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.prose{display:grid;gap:16px;max-width:62ch}
+.prose h4,.side h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.06em;color:var(--ink-3);margin:10px 0 -6px;text-transform:lowercase}
+.prose p{color:var(--ink-2)}
+.prose ul{margin:0;padding-left:18px;color:var(--ink-2);display:grid;gap:6px}
+.side{display:grid;gap:18px;align-content:start}
+.nums{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.nums li{display:grid;grid-template-columns:minmax(84px,auto) 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.nums b{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:22px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nums span{color:var(--ink-2);font-size:14.5px}
+.stack{display:flex;gap:6px;flex-wrap:wrap}
+.note{border-left:2px solid var(--red);padding:2px 0 2px 14px;color:var(--ink-2);font-size:15px}
+.ext{font-family:var(--mono);font-size:13px;color:var(--red-ink)}
+.pager{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:13px}
+.pager a{text-decoration:none;color:var(--ink-2)}
+.pager a:hover{color:var(--red)}
+
+/* before/after */
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px;padding-top:28px}
+.ba figure{margin:0;display:grid;gap:8px}
+.ba .frame{aspect-ratio:4/5;background:#fff;border:1px solid var(--rule);border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.ba .frame img{width:100%;height:100%;object-fit:contain}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:12.5px;border:1px solid var(--rule);background:var(--card);border-radius:999px;padding:5px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block;border:1px solid var(--rule)}
+.chip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+
+/* charts */
+.chart{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:18px 18px 12px;margin-top:28px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart svg text{fill:var(--ink-3);font-family:var(--mono);font-size:11px}
+.chart .cap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.chart .cap b{font-weight:600}
+.legend{display:flex;gap:14px;font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.tip{position:fixed;z-index:60;pointer-events:none;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:12px;padding:6px 9px;border-radius:4px;white-space:nowrap}
+
+/* clothes */
+.drops{display:grid;gap:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,44px)}
+.drop{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:clamp(18px,3vw,40px);align-items:start}
+@media (max-width:760px){.drop{grid-template-columns:1fr}}
+.drop .info{display:grid;gap:10px;position:sticky;top:84px}
+@media (max-width:760px){.drop .info{position:static}}
+.drop .info p{color:var(--ink-2);font-size:15px}
+.drop .big{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(26px,3vw,34px);letter-spacing:-.02em;line-height:1}
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.strip button{flex:none;width:clamp(180px,24vw,260px);aspect-ratio:3/4;padding:0;border:0;border-radius:4px;overflow:hidden;background:var(--shot-bg);cursor:zoom-in;scroll-snap-align:start}
+.strip button img{width:100%;height:100%;object-fit:cover}
+.strip .empty{flex:none;width:clamp(180px,24vw,260px);aspect-ratio:3/4;border:1px dashed var(--rule);border-radius:4px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
+/* about */
+.about-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:820px){.about-top{grid-template-columns:1fr}}
+.about-top .photo{border-radius:6px;overflow:hidden;border:1px solid var(--rule)}
+.story{display:grid;gap:16px;max-width:60ch;font-size:17px}
+.story p{color:var(--ink-2)}
+.story p:first-child{color:var(--ink);font-size:clamp(19px,1.8vw,22px)}
+.tl{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule)}
+.tl li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.tl time{font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+.tl li.next time{color:var(--red-ink)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;margin-top:28px}
+.quotes blockquote{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:12px;justify-content:space-between}
+.quotes p{font-family:var(--display);font-stretch:105%;font-weight:600;font-size:19px;line-height:1.25;letter-spacing:-.01em}
+.quotes cite{font-family:var(--mono);font-style:normal;font-size:12px;color:var(--ink-3)}
+.contact{display:grid;gap:12px;margin-top:28px;background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:22px}
+.contact .line{display:flex;gap:10px 16px;flex-wrap:wrap;align-items:center;font-family:var(--mono);font-size:14px}
+.contact .line span{color:var(--ink-3);min-width:70px}
+.copy{font-family:var(--mono);font-size:12px;border:1px solid var(--rule);background:transparent;border-radius:3px;padding:3px 9px;cursor:pointer}
+.copy:hover{border-color:var(--ink)}
+.sub{padding-top:clamp(44px,6vw,72px)}
+.sub>h2{margin-bottom:6px}
+
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:80;background:rgba(8,9,8,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px}
+.lb img{max-width:min(1400px,100%);max-height:calc(100% - 70px);object-fit:contain;border-radius:4px}
+.lb .lbbar{display:flex;gap:10px;align-items:center;font-family:var(--mono);font-size:12.5px;color:#cfd3cf}
+.lb button{background:transparent;border:1px solid #555;color:#eee;border-radius:3px;padding:5px 12px;cursor:pointer;font-family:var(--mono);font-size:12.5px}
+
+[hidden]{display:none!important}
+.adi{width:100vw;margin-left:calc(50% - 50vw);background:#0f100f;color:#f1f2ef;padding:clamp(48px,7vw,96px) max(clamp(16px,4vw,48px),calc((100vw - 1180px)/2));display:grid;gap:clamp(28px,4vw,48px)}
+.aditop{display:grid;gap:14px;max-width:62ch}
+.aditop .eyebrow{color:#ff5a6b}
+.adibig{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(30px,4.4vw,60px);line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
+.adibig .r{color:#ff3348}
+.aditop p:not(.adibig){color:#c3c8c2;font-size:17px}
+.vsrow{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:clamp(18px,3vw,40px)}
+.vs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:10px;padding-top:14px;border-top:2px solid #e1122b}
+.vs figure{margin:0;display:grid;gap:8px;align-content:start}
+.vs button{padding:0;border:0;background:#1b1d1b;border-radius:3px;overflow:hidden;cursor:zoom-in}
+.vs img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.vs figcaption{font-family:var(--mono);font-size:12px;color:#9aa09a}
+.vs figcaption b{color:#f1f2ef;font-weight:500;margin-right:6px}
+@media (max-width:760px){.vsrow{grid-template-columns:1fr}}
+
+/* engine demo: same dark contact-sheet look as the reel strip */
+.trybox.dm-engine{background:#0b0c0b;border-color:#0b0c0b;--paper:#0b0c0b;--card:#121412;--ink:#eef0ed;--ink-2:#b3b8b3;--ink-3:#7d827d;--rule:#262926;--rule-2:#1b1d1b;--bar-a:#4a4f4a;--bar-b:#e1122b;color:var(--ink);padding:clamp(16px,3vw,28px)}
+.trybox.dm-engine .dm-s{background:transparent;border:0;border-top:2px solid #e1122b;border-radius:0;padding:10px 0 0}
+.trybox.dm-engine .dm-chart,.trybox.dm-engine .dm-theory{background:transparent;border-color:#262926;border-radius:0}
+.trybox.dm-engine .dm-c{background:transparent;border-color:#333733;color:#d9ddd8}
+.trybox.dm-engine .dm-c[aria-pressed="true"]{background:#eef0ed;color:#0b0c0b;border-color:#eef0ed}
+.trybox.dm-engine .dm-bar div{background:#e1122b}
+.trybox.dm-engine .dm-vs div{border-radius:0;border-color:#262926}
+
+.phero.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);background:#0f100f}
+.phero.split::after{display:none}
+.phero.split img{position:relative;grid-column:2;grid-row:1;height:100%}
+.phero.split .herotext h1{font-size:clamp(32px,4.2vw,60px)}
+.phero.split .herotext{position:relative;align-self:center!important;grid-column:1;grid-row:1;align-self:end;left:auto;right:auto;bottom:auto;padding:0 clamp(16px,4vw,56px) clamp(28px,6vw,64px) max(clamp(16px,4vw,48px),calc((100vw - 1180px)/2))}
+@media (max-width:760px){.phero.split{grid-template-columns:1fr;grid-template-rows:58% 42%;height:auto;min-height:0}.phero.split img{grid-column:1;grid-row:1;height:52svh}.phero.split .herotext{grid-column:1;grid-row:2;padding:24px 16px 32px}}
+.phero.collage{background:#0b0c0b}
+.phero.collage::after{background:linear-gradient(90deg,rgba(11,12,11,.96) 0%,rgba(11,12,11,.75) 38%,rgba(11,12,11,.05) 70%),linear-gradient(0deg,rgba(11,12,11,.6),rgba(11,12,11,0) 40%)}
+.cl{position:absolute;inset:0}
+.phero .cl img{position:absolute;border-radius:6px;box-shadow:0 30px 60px -20px rgba(0,0,0,.8);animation:none;height:auto;inset:auto;object-fit:contain}
+.phero .cl .c1{width:46%;right:-4%;top:4%;transform:rotate(-2deg)}
+.phero .cl .c2{width:26%;right:2%;top:44%;transform:rotate(3deg)}
+.phero .cl .c3{width:11%;right:30%;top:38%;transform:rotate(4deg);border-radius:12px}
+.phero .cl .c4{width:11%;right:43%;top:-3%;transform:rotate(-6deg)}
+.phero .cl .c5{width:22%;right:20%;top:73%;transform:rotate(-3deg)}
+.phero .cl .c6{width:10%;right:42%;top:46%;transform:rotate(-4deg);border-radius:10px}
+.phero .cl .c7{width:9%;right:8%;top:76%;transform:rotate(5deg);background:#fff}
+.phero .cl .c8{width:20%;right:28%;top:22%;transform:rotate(1deg)}
+.phero .cl .c9{width:18%;right:-3%;top:70%;transform:rotate(-4deg)}
+.phero .cl .c10{width:24%;right:40%;top:76%;transform:rotate(2deg)}
+.phero.collage .herotext h1{max-width:12ch;font-size:clamp(34px,5vw,72px)}
+.phero.collage .herotext .lede{max-width:44ch}
+@media (max-width:760px){.phero .cl .c1{width:80%;right:-20%}.phero .phero .cl .c2{width:75%;right:5%;top:30%}.phero .phero .cl .c3{width:34%;right:-4%;top:48%}.phero .phero .cl .c4{width:32%;right:52%;top:2%}.phero .phero .cl .c5,.phero .cl .c8,.phero .cl .c10{display:none}}
+
+.note2{border-left:3px solid var(--ink);padding-left:14px;color:var(--ink)!important;font-size:16px}
+.give b{display:block;font-family:var(--display);font-weight:800;font-stretch:118%;font-size:clamp(56px,9vw,120px);letter-spacing:-.04em;line-height:.95;color:var(--red-ink)}
+.give span{display:block;margin-top:10px;color:var(--ink-2);font-size:17px}
+.giverows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0 28px;border-top:2px solid var(--ink)}
+.giverows div{padding:16px 0;border-bottom:1px solid var(--rule)}
+.giverows b{display:block;font-family:var(--display);font-weight:800;font-stretch:112%;font-size:28px;letter-spacing:-.02em}
+.giverows span{display:block;margin-top:4px;color:var(--ink-2);font-size:15px}
+
+/* page heroes + editorial sections (shared by ventures, builds, about, community) */
+.phero{position:relative;width:100vw;margin-left:calc(50% - 50vw);height:min(82vh,860px);height:min(82svh,860px);min-height:480px;overflow:hidden;background:#111}
+.phero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:heroin 2s cubic-bezier(.2,.8,.2,1) both}
+.phero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.2) 55%,rgba(0,0,0,.8) 100%)}
+.phero .herotext h1{font-size:clamp(36px,6vw,84px);max-width:16ch}
+.bignums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:24px 32px;padding-block:clamp(32px,5vw,56px);border-bottom:1px solid var(--rule)}
+.bignums b{display:block;font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(30px,3.6vw,46px);letter-spacing:-.025em;line-height:1;font-variant-numeric:tabular-nums}
+.bignums span{display:block;margin-top:8px;color:var(--ink-2);font-size:14.5px}
+.sec{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(18px,4vw,64px);padding-block:clamp(44px,6vw,80px);border-bottom:1px solid var(--rule)}
+.sec>h2{font-size:clamp(22px,2.4vw,30px);position:sticky;top:84px;align-self:start}
+.sec>*:not(h2){min-width:0}
+@media (max-width:820px){.sec{grid-template-columns:1fr}.sec>h2{position:static}}
+.secbody{display:grid;gap:18px;max-width:68ch}
+.secbody.wide{max-width:none}
+.secbody .chart{margin-top:0}
+.big{font-family:var(--display);font-weight:600;font-stretch:104%;font-size:clamp(20px,2vw,26px);line-height:1.3;letter-spacing:-.01em;color:var(--ink)!important;text-wrap:pretty}
+.secbody p:not(.big){color:var(--ink-2)}
+.voices{display:grid;gap:10px}
+.voices q{font-family:var(--display);font-weight:700;font-size:clamp(18px,1.8vw,22px);letter-spacing:-.01em;border-left:3px solid var(--red);padding-left:14px;quotes:"“" "”"}
+.src{font-family:var(--mono);font-size:12px;color:var(--ink-3)!important}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:0;border-top:2px solid var(--ink);counter-reset:f}
+.flow li{counter-increment:f;padding:16px 18px 18px 0;border-right:1px solid var(--rule);display:grid;gap:8px;align-content:start}
+.flow li:last-child{border-right:0}
+.flow li::before{content:counter(f);font-family:var(--mono);font-size:12px;color:var(--red-ink)}
+.flow b{font-family:var(--display);font-stretch:112%;font-size:22px;letter-spacing:-.015em}
+.flow span{color:var(--ink-2);font-size:15px}
+@media (max-width:820px){.flow li{border-right:0;border-bottom:1px solid var(--rule);padding-left:0}}
+.findings{display:grid;gap:0}
+.finding{display:grid;grid-template-columns:minmax(110px,180px) minmax(0,1fr);gap:24px;padding-block:22px;border-top:1px solid var(--rule);align-items:baseline}
+.finding:first-child{border-top:2px solid var(--ink)}
+.finding b{font-family:var(--display);font-weight:800;font-stretch:115%;font-size:clamp(34px,4vw,52px);letter-spacing:-.03em;line-height:1;color:var(--red-ink)}
+.finding p{color:var(--ink-2);font-size:17px;max-width:62ch}
+@media (max-width:560px){.finding{grid-template-columns:1fr;gap:8px}}
+.vrows{display:grid}
+.vrow{display:grid;grid-template-columns:110px minmax(0,240px) minmax(0,1fr);gap:16px;padding-block:18px;border-top:1px solid var(--rule);text-decoration:none;color:inherit;align-items:baseline}
+.vrow:first-child{border-top:2px solid var(--ink)}
+a.vrow:hover b{color:var(--red-ink)}
+.vrow .yr{font-family:var(--mono);font-size:12.5px;color:var(--ink-3)}
+.vrow b{font-family:var(--display);font-stretch:110%;font-size:20px;letter-spacing:-.01em}
+.vrow p{color:var(--ink-2)}
+@media (max-width:700px){.vrow{grid-template-columns:1fr;gap:4px}}
+.drops{padding-top:0}
+.drop .info{top:96px}
+.story2{display:grid;gap:clamp(48px,8vw,110px);padding-block:clamp(48px,7vw,96px);border-bottom:1px solid var(--rule)}
+.srow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,72px);align-items:center}
+.srow.flip .stext{order:2}
+.srow img{width:100%;max-height:640px;object-fit:cover;border-radius:3px}
+.stext{display:grid;gap:14px}
+.stext .yr{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--red-ink)}
+.stext .big{font-size:clamp(24px,2.8vw,38px);font-weight:800;font-stretch:110%;line-height:1.12;letter-spacing:-.02em}
+.stext p:not(.big){color:var(--ink-2);font-size:17px;max-width:52ch}
+@media (max-width:760px){.srow{grid-template-columns:1fr}.srow.flip .stext{order:0}.srow img{max-height:460px}}
+.also{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:28px}
+.also b{display:block;font-family:var(--display);font-weight:800;font-stretch:112%;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em}
+.also span{display:block;margin-top:6px;color:var(--ink-2)}
+.tl{margin:0;border-top:2px solid var(--ink)}
+.tl li{grid-template-columns:120px minmax(0,1fr);padding:14px 0;font-size:17px}
+.tl time{font-size:13px}
+.band{width:100vw;margin-left:calc(50% - 50vw);background:#0f100f;color:#f1f2ef;padding-block:clamp(56px,8vw,110px)}
+.bandin{max-width:1180px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(36px,5vw,72px) clamp(28px,5vw,64px)}
+@media (max-width:760px){.bandin{grid-template-columns:1fr}}
+.band blockquote{margin:0;display:grid;gap:14px}
+.band p{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:clamp(22px,2.6vw,34px);line-height:1.12;letter-spacing:-.02em;text-wrap:balance}
+.band cite{font-family:var(--mono);font-style:normal;font-size:12.5px;color:#9aa09a}
+.contact2{display:grid;gap:18px}
+.contact2 .mail{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.contact2 .mail b{font-family:var(--display);font-weight:800;font-stretch:110%;font-size:clamp(22px,3.4vw,44px);letter-spacing:-.02em;overflow-wrap:anywhere}
+.contact2 .links{display:flex;gap:10px 26px;flex-wrap:wrap;font-family:var(--mono);font-size:14px}
+.contact2 .links a{text-decoration:none;border-bottom:1px solid var(--rule)}
+.contact2 .links a:hover{color:var(--red-ink);border-color:var(--red)}
+.pulls{display:grid;gap:16px}
+.pulls p{font-family:var(--display);font-weight:700;font-size:clamp(18px,1.8vw,22px);line-height:1.3;color:var(--ink)!important;border-left:3px solid var(--red);padding-left:14px}
+.steps2{margin:0;padding:0;list-style:none;counter-reset:st;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:0 24px;border-top:2px solid var(--ink)}
+.steps2 li{counter-increment:st;display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:16px}
+.steps2 li::before{content:counter(st,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--red-ink);padding-top:3px}
+.irl2{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:760px){.irl2{grid-template-columns:1fr}}
+.irl2 figure{margin:0;display:grid;gap:10px;align-content:start}
+.irl2 img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.irl2 figcaption{font-family:var(--body);font-size:15px;color:var(--ink-2)}
+.irl2 figcaption b{display:block;font-family:var(--mono);font-weight:500;font-size:12px;color:var(--ink-3);margin-bottom:4px}
+.grid .card{border:0;background:transparent;border-radius:0}
+.grid .card .thumb{border-radius:4px;border:1px solid var(--rule)}
+.grid .card .body{padding:14px 2px 6px}
+.grid .card:hover{transform:none}
+.grid .card:hover .thumb{border-color:var(--ink-3)}
+.grid .card:hover h3{color:var(--red-ink)}
+
+.hero{position:relative;width:100vw;margin-left:calc(50% - 50vw);height:calc(100vh - 59px);height:calc(100svh - 59px);min-height:500px;overflow:hidden;background:#111}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:heroin 2.2s cubic-bezier(.2,.8,.2,1) both}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,.15) 55%,rgba(0,0,0,.78) 100%)}
+.herotext{position:absolute;z-index:2;left:clamp(16px,4vw,48px);right:clamp(16px,4vw,48px);bottom:clamp(28px,6vw,64px);display:grid;gap:14px;max-width:1180px;margin-inline:auto;color:#fff}
+.herotext h1{font-size:clamp(40px,7.4vw,104px);max-width:13ch;color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.herotext .r{color:#ff3348}
+.herotext .eyebrow,.herotext .scrollcue{color:rgba(255,255,255,.9);text-shadow:0 1px 12px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.8)}
+.herotext .lede{text-shadow:0 1px 14px rgba(0,0,0,.8)}
+.herotext .lede{color:rgba(255,255,255,.88)}
+.scrollcue{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em}
+#v-home,#v-ventures,#v-builds,#v-about,#v-community{padding-top:0}
+@media (max-width:560px){.hero{height:calc(100svh - 92px)}}
+@keyframes heroin{from{transform:scale(1.08);filter:brightness(.7)}to{transform:scale(1);filter:none}}
+@media (prefers-reduced-motion:reduce){.hero img{animation:none}}
+/* home: one screen that fills with photos as you scroll, beliefs swap in the middle, then the full wall */
+.gh{display:grid;gap:18px;justify-items:center;text-align:center;padding:clamp(40px,9vw,120px) 0 clamp(20px,4vw,40px)}
+.gh h1{max-width:16ch}
+.gh .r{color:var(--red)}
+.stagewrap{height:420vh;width:100vw;margin-left:calc(50% - 50vw);position:relative}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.sp{position:absolute;left:0;top:0;padding:0;border:0;background:var(--shot-bg);border-radius:3px;overflow:hidden;cursor:zoom-in;box-shadow:0 18px 40px -22px rgba(0,0,0,.6);opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(.62);transition:opacity .55s ease,transform .75s cubic-bezier(.2,.9,.25,1.15);will-change:transform}
+.sp.on{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1)}
+.sp img{width:100%;height:100%;object-fit:cover}
+.bbox{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);z-index:900;display:grid;gap:12px;justify-items:center;text-align:center;width:min(560px,86vw);padding:22px 26px;border-radius:6px;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .4s ease}
+.bbox.swap{opacity:0}
+.bbox .bsrc{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.bbox .yr:empty{display:none}
+.bbox .yr{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--red-ink)}
+.gbelief{font-family:var(--display);font-weight:800;font-stretch:112%;letter-spacing:-.02em;line-height:1.08;font-size:clamp(22px,3vw,38px);text-wrap:balance;margin:0}
+.wall{columns:4 220px;column-gap:12px;padding-top:clamp(40px,6vw,80px)}
+.wall button{display:block;width:100%;margin:0 0 12px;padding:0;border:0;border-radius:3px;overflow:hidden;background:var(--shot-bg);cursor:zoom-in;break-inside:avoid}
+.wall img{width:100%;height:auto}
+.gend{display:grid;gap:18px;padding-block:clamp(40px,6vw,80px) 20px}
+@media (prefers-reduced-motion:reduce){.stagewrap{display:none}}
+
+.tag.play{color:var(--red-ink);border-color:color-mix(in srgb,var(--red) 45%,var(--rule))}
+.try{padding-top:28px;display:grid;gap:10px}
+.tryhead{display:flex;gap:8px 16px;flex-wrap:wrap;align-items:baseline}
+.trybox{background:var(--card);border:1px solid var(--rule);border-radius:6px;overflow:hidden;min-width:0}
+.tryframe{display:block;width:100%;height:min(78vh,760px);border:0;border-top:1px solid var(--rule);background:#fff}
+.homegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;padding-top:clamp(28px,4vw,44px)}
+.hblock{display:grid;gap:6px;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--rule);border-radius:6px;overflow:hidden;padding-bottom:18px;transition:transform .18s ease,border-color .18s}
+.hblock:hover{transform:translateY(-3px);border-color:var(--ink-3)}
+.hblock img{width:100%;aspect-ratio:4/3;object-fit:cover;margin-bottom:8px;background:var(--shot-bg)}
+.hblock>*:not(img){padding-inline:18px}
+.hblock b{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:34px;letter-spacing:-.02em;line-height:1}
+.hblock span:last-child{color:var(--ink-2);font-size:15px}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-top:clamp(28px,4vw,44px)}
+@media (max-width:820px){.cgrid{grid-template-columns:1fr}}
+.cblock{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:22px;display:grid;gap:12px;align-content:start}
+.cblock.wide{grid-column:1/-1}
+.cblock p{color:var(--ink-2)}
+.said{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+.said li{border-left:2px solid var(--red);padding-left:12px;color:var(--ink);font-size:15px}
+.steps{margin:0;padding-left:22px;columns:2;column-gap:24px;color:var(--ink-2);font-size:14.5px;font-family:var(--mono)}
+@media (max-width:480px){.steps{columns:1}}
+.quietnote{font-size:14.5px;color:var(--ink-3)!important}
+.irl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:18px}
+.irl b{font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--ink-3)}
+.irl p{margin-top:4px;font-size:15px}
+footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+
+@media (max-width:560px){
+  .bar{gap:8px;padding-block:8px}
+  nav.tabs{margin-left:0;width:100%;flex-wrap:wrap;row-gap:2px}
+  nav.tabs a{padding:5px 10px}
+  .nums li{grid-template-columns:1fr}
+  .tl li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="bar">
+    <a class="mark" href="#home"><span class="ast">*</span>emmanuel bakopoulos</a>
+    <nav class="tabs" aria-label="sections">
+      <a href="#home" data-tab="home">home</a>
+      <a href="#ventures" data-tab="ventures">ventures</a>
+      <a href="#builds" data-tab="builds">builds</a>
+      <a href="#about" data-tab="about">about</a>
+      <a href="#community" data-tab="community">community</a>
+      <a href="emmanuel-bakopoulos-resume.pdf" download>resume ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="view" id="v-home">
+    <div class="hero">
+      <img src="img/hero.jpg" alt="a crowd filling crosby street in new york" fetchpriority="high">
+      <div class="herotext">
+        <span class="eyebrow">18 · new york · founder of v2byvelare</span>
+        <h1>at 16 i made 100 shirts and sold 2<span class="r">.</span></h1>
+        <p class="lede">this is everything between that and now, in order.</p>
+        <span class="scrollcue">scroll ↓</span>
+      </div>
+    </div>
+    <div class="stagewrap" id="stagewrap"><div class="stage" id="stage"><div class="bbox" id="bbox"><span class="yr" id="byr"></span><p class="gbelief" id="btext"></p><span class="bsrc" id="bsrc"></span></div></div></div>
+    <div class="wall" id="wall"></div>
+    <div class="gend">
+      <div class="homegrid">
+        <a class="hblock" href="#ventures"><img src="img/brand-09.jpg" alt="" loading="lazy"><span class="eyebrow">ventures</span><b>$1.27M</b><span>v2byvelare, since june 2025</span></a>
+        <a class="hblock" href="#builds"><img src="img/dropgate-line.jpg" alt="" loading="lazy" style="object-position:top"><span class="eyebrow">builds</span><b>12</b><span>systems the brand runs on. most are playable</span></a>
+        <a class="hblock" href="#community"><img src="img/g/12.jpg" alt="" loading="lazy"><span class="eyebrow">community</span><b>250+</b><span>young founders helping each other</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="v-builds" hidden>
+    <div class="phero collage"><div class="cl" aria-hidden="true"><img class="c1" src="img/engine-reels.jpg" alt=""><img class="c2" src="img/staysync-home.jpg" alt=""><img class="c3" src="img/dropgate-line.jpg" alt=""><img class="c4" src="img/jarvis.jpg" alt=""><img class="c5" src="img/cash-timeline.jpg" alt=""><img class="c6" src="img/preorder.jpg" alt=""><img class="c7" src="img/retouch-grey.jpg" alt=""><img class="c8" src="img/dropgate-admin.jpg" alt=""><img class="c9" src="img/room.jpg" alt=""><img class="c10" src="img/orchestra-blooms.jpg" alt=""></div>
+      <div class="herotext"><span class="eyebrow">builds · since january 2026</span><h1>every problem the business had, i built something for<span class="r">.</span></h1>
+      <p class="lede">i taught myself with ai coding tools. the ones marked playable run right here in your browser.</p></div></div>
+    <div class="gridhead">
+      <h2>12 builds</h2>
+      <span class="hint">click any card</span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="view" id="v-detail" hidden></section>
+
+  <section class="view" id="v-ventures" hidden>
+    <div class="phero split"><img src="img/hero-ventures.jpg" alt="my room in june 2025, the floor covered in orders">
+      <div class="herotext"><span class="eyebrow">ventures · since 2024</span><h1>i run a $1.27M apparel company<span class="r">.</span> fully bootstrapped<span class="r">.</span></h1>
+      <p class="lede">v2byvelare sells limited drops to people my age, direct, online. i run every part of it: product, manufacturing, demand, fulfillment and cash.</p></div></div>
+    <div class="bignums">
+      <div><b>$1.27M</b><span>revenue since jun 2025</span></div>
+      <div><b>14,700+</b><span>orders</span></div>
+      <div><b>12,000+</b><span>customers</span></div>
+      <div><b>58–80%</b><span>gross margin</span></div>
+      <div><b>100%</b><span>bootstrapped</span></div>
+    </div>
+
+    <section class="sec">
+      <h2>the position</h2>
+      <div class="secbody">
+        <p class="big">most brands try to get sold. i try to get remembered.</p>
+        <p>there's no logo on the front. the cheetah stripe is the emblem: on every piece, in the same place, so you can spot a v2 hoodie from across a room. it's the spine of the brand, and everything else stays quiet around it.</p>
+        <p>the product is premium basics at a price people my age can actually pay: a $74 heavyweight hoodie. customers describe it the same way, without being asked:</p>
+        <div class="voices"><q>absolutely the best hoodie in my closet. super clean and heavyweight.</q><q>overall amazing quality and fit</q><q>1.5 year update on my favorite hoodie</q></div>
+        <p class="src">public tiktok posts from customers, 2025–26</p>
+      </div>
+    </section>
+
+    <div class="adi">
+      <div class="aditop">
+        <span class="eyebrow">2026</span>
+        <p class="adibig">then adidas put out a cheetah stripe<span class="r">.</span></p>
+        <p>same placement down the sleeve and leg, same colorways. i built that detail in my bedroom with no logo and no budget. when one of the biggest brands in the world lands on the same idea, the emblem is working.</p>
+      </div>
+      <div class="vsrow">
+        <div class="vs"><figure><button type="button" data-lba="0"><img src="img/brand-01.jpg" alt="black noire hoodie, v2byvelare" loading="lazy"></button><figcaption><b>v2byvelare</b> noire hoodie · summer 2025</figcaption></figure>
+          <figure><button type="button" data-lba="1"><img src="img/adi-1.jpg" alt="adidas black hoodie with a cheetah stripe" loading="lazy"></button><figcaption><b>adidas</b> 2026</figcaption></figure>
+          <figure><button type="button" data-lba="2"><img src="img/adi-2.jpg" alt="adidas sleeve with a cheetah stripe" loading="lazy"></button><figcaption><b>adidas</b> the sleeve</figcaption></figure></div>
+        <div class="vs"><figure><button type="button" data-lba="3"><img src="img/brand-10.jpg" alt="brown noire hoodie, v2byvelare" loading="lazy"></button><figcaption><b>v2byvelare</b> brown noire · may 2026</figcaption></figure>
+          <figure><button type="button" data-lba="4"><img src="img/adi-3.jpg" alt="adidas brown pants with a cheetah stripe" loading="lazy"></button><figcaption><b>adidas</b> 2026</figcaption></figure></div>
+      </div>
+    </div>
+
+    <section class="sec">
+      <h2>how it makes money</h2>
+      <ol class="flow">
+        <li><b>design</b><span>i design every piece and write the tech packs the factories build from.</span></li>
+        <li><b>make</b><span>factories overseas. a hoodie lands at about $24.</span></li>
+        <li><b>demand</b><span>about half organic (88.9k on instagram, 16k on the text list), half meta ads.</span></li>
+        <li><b>drop</b><span>limited drops, preorder or premade. the average order is around $87.</span></li>
+        <li><b>deliver</b><span>a warehouse partner ships it, a 3 person team handles support.</span></li>
+        <li><b>cash</b><span>factories get paid weeks before customers do. timing is the real constraint, so i built a tool for it.</span></li>
+      </ol>
+    </section>
+
+    <section class="sec">
+      <h2>what the numbers taught me</h2>
+      <div class="findings">
+        <div class="finding"><b>60%</b><p>of all revenue came from the original 6 products. each new generation sold about 5x less per product than the one before: $124k, then $26k, then $6k, then $1.4k. in sep 2026 i cut the line down to the winners.</p></div>
+        <div class="finding"><b>19%</b><p>is what's left of a $68 hoodie after paid ads at a 2.7x return. gross margin is 58–80%. the margin lives in organic content, so that's where my time goes.</p></div>
+        <div class="finding"><b>$103</b><p>average order in sep 2026, the highest ever, while order count fell. so it's not a price problem, it's a new customer problem: about 1,500 new customers a month in summer 2025, 400–700 in 2026.</p></div>
+        <div class="finding"><b>8%</b><p>when refunds and chargebacks pass 8% of sales, it has always been a shipping problem. customers say it plainly: quality yes, wait no. so drops are moving from preorder to premade.</p></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>sales by month</h2>
+      <div class="secbody wide"><div class="chart" id="revchart"></div></div>
+    </section>
+
+    <section class="sec">
+      <h2>the drops</h2>
+      <div class="secbody wide"><div class="drops" id="drops"></div></div>
+    </section>
+
+    <section class="sec">
+      <h2>other ventures</h2>
+      <div class="vrows">
+        <div class="vrow"><span class="yr">2024–25</span><b>velare</b><p>the first brand. $104k in sales and 1,420 orders. it taught me what v2 does differently.</p></div>
+        <a class="vrow" href="#community"><span class="yr">2025–now</span><b>execution group</b><p>a free community of 250+ young founders helping each other. →</p></a>
+        <div class="vrow"><span class="yr">2023–now</span><b>creator work</b><p>paid model and creator for 12+ streetwear brands, 1,000+ posts.</p></div>
+        <a class="vrow" href="#engine"><span class="yr">2026</span><b>content engine for other brands</b><p>packaging my content engine with a partner so other brands can use it. early, no customers yet. →</p></a>
+        <a class="vrow" href="#signaller"><span class="yr">2026</span><b>signaller</b><p>tried selling my trend tool to brands at $499 a month. dropped it to focus on v2. →</p></a>
+      </div>
+    </section>
+  </section>
+
+  <section class="view" id="v-about" hidden>
+    <div class="phero"><img src="img/hero-about.jpg" alt="me in a creek in the grey noire set" style="object-position:50% 8%">
+      <div class="herotext"><span class="eyebrow">about</span><h1>i'm em<span class="r">.</span></h1>
+      <p class="lede">18. grew up between los angeles, mexico city and new york.</p></div></div>
+
+    <div class="story2">
+      <div class="srow"><div class="stext"><span class="yr">2024</span><p class="big">at 16 i ordered 100 pieces for my first drop and sold 2.</p><p>i kept going. a few months later one video went from 10k views to 1.2 million and i had my first $10k month.</p></div><img src="img/g/50.jpg" alt="the first name, global thread" loading="lazy"></div>
+      <div class="srow flip"><div class="stext"><span class="yr">2025</span><p class="big">then $30k of inventory got stuck in customs for months.</p><p>“the real problem wasn't customs. it was me.” that's when i started planning everything instead of reacting to it.</p></div><img src="img/g/53.jpg" alt="packing orders" loading="lazy"></div>
+      <div class="srow"><div class="stext"><span class="yr">jun 2025</span><p class="big">i relaunched as v2byvelare. the next month did $138k.</p><p>december did $213k. no investors, no loans. my room turned into a warehouse.</p></div><img src="img/g/38.jpg" alt="my room full of orders" loading="lazy"></div>
+      <div class="srow flip"><div class="stext"><span class="yr">jan 2026</span><p class="big">i opened claude code for the first time and made my first repo two days later.</p><p>most of my problems weren't design problems anymore. they were systems problems: cash timing, drop day traffic, making enough content. so i built the systems.</p></div><img src="img/g/13.jpg" alt="editing at my desk" loading="lazy"></div>
+      <div class="srow"><div class="stext"><span class="yr">jun 2026</span><p class="big">i finished high school, got into northeastern, but chose to keep building.</p></div><img src="img/g/04.jpg" alt="the shopify plaque for 10,000 orders" loading="lazy"></div>
+    </div>
+
+    <section class="sec">
+      <h2>giving back</h2>
+      <div class="secbody wide">
+        <div class="give"><b>$57k+</b><span>in clothing given away, about 800 pieces, at retail value</span></div>
+        <div class="giverows">
+          <div><b>$20k</b><span>250+ pieces to shelters, families and youth programs, from the very start</span></div>
+          <div><b>$10k</b><span>given away online</span></div>
+          <div><b>$27k</b><span>400 pieces at one giveaway (400 × $68)</span></div>
+        </div>
+        <p class="big" style="max-width:56ch">i started with nothing, and people showed up for me anyway. giving back isn't a side thing. the long-term plan is a non-profit.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>outside the work</h2>
+      <div class="also">
+        <div><b>10 years</b><span>of piano. i play by ear.</span></div>
+        <div><b>13 years</b><span>of soccer, on club teams in los angeles, mexico city and new york.</span></div>
+        <div><b>3 languages</b><span>english, spanish and greek.</span></div>
+        <div><b>3 cities</b><span>grew up between los angeles, mexico city and new york.</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>timeline</h2>
+      <ol class="tl" id="timeline"></ol>
+    </section>
+
+    <div class="band">
+      <div class="bandin">
+        <blockquote><p>“i really don't like sewing. like at all. but i still did it, and that's probably what i'm most proud of.”</p><cite>senior project journal · 2025–26</cite></blockquote>
+        <blockquote><p>“if i take the piece out of the video, does the video still make sense? if it doesn't, you're still just trying to sell people.”</p><cite>voice memo · aug 13 2026</cite></blockquote>
+        <blockquote><p>“you could do all the right things and it could still sound bad.”</p><cite>on piano, and skill · aug 13 2026</cite></blockquote>
+        <blockquote><p>“once you start being their friend, you stop confronting them as much.”</p><cite>on working with factories · aug 14 2026</cite></blockquote>
+      </div>
+    </div>
+
+    <section class="sec">
+      <h2>contact</h2>
+      <div class="contact2">
+        <div class="mail"><b id="email">emmanuelbakk@gmail.com</b><button class="copy" type="button" data-copy="emmanuelbakk@gmail.com">copy</button></div>
+        <div class="links"><a href="https://www.linkedin.com/in/emmanuel-bak-509b44319" target="_blank" rel="noopener">linkedin ↗</a><a href="https://v2byvelare.com" target="_blank" rel="noopener">v2byvelare.com ↗</a><a href="emmanuel-bakopoulos-resume.pdf" download>resume (pdf) ↓</a></div>
+      </div>
+    </section>
+  </section>
+
+  <section class="view" id="v-community" hidden>
+    <div class="phero"><img src="img/hero-community.jpg" alt="a line of people down the block in new york, sep 2026" style="object-position:30% 45%">
+      <div class="herotext"><span class="eyebrow">community · since feb 2025</span><h1>i started by giving away what i knew<span class="r">.</span></h1>
+      <p class="lede">now it's 250+ young founders helping each other.</p></div></div>
+    <div class="bignums">
+      <div><b>250+</b><span>founders in the group</span></div>
+      <div><b>100+</b><span>on the waitlist</span></div>
+      <div><b>302</b><span>affiliate applicants in 5 hours</span></div>
+      <div><b>$0</b><span>to join</span></div>
+    </div>
+
+    <section class="sec">
+      <h2>execution group</h2>
+      <div class="secbody">
+        <div class="pulls">
+          <p>a student in florida teaching a dad in pakistan to launch his first store, at 2am.</p>
+          <p>a founder in london walking someone in canada through their first drop.</p>
+          <p>“i couldn't have started without you.”</p>
+        </div>
+        <p class="src">it runs every day without me.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>execution plus</h2>
+      <div class="secbody wide">
+        <ol class="steps2"><li>naming your brand</li><li>brand identity</li><li>your thread</li><li>finding your audience</li><li>designing your pieces</li><li>tech packs</li><li>finding a manufacturer</li><li>blanks vs cut and sew</li><li>setting up your store</li></ol>
+        <p class="src">the free starter path i wrote for the group.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2>in real life</h2>
+      <div class="irl2">
+        <figure><img src="img/g/14.jpg" alt="new york fashion week, feb 2026" loading="lazy"><figcaption><b>feb 2026</b> group popup at new york fashion week.</figcaption></figure>
+        <figure><img src="img/g/24.jpg" alt="a crowd in new york" loading="lazy"><figcaption><b>new york</b> people showing up.</figcaption></figure>
+        <figure><img src="img/g/54.jpg" alt="a giveaway crowd in los angeles" loading="lazy"><figcaption><b>los angeles</b> a giveaway.</figcaption></figure>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <span>every screenshot is from my own machine. dollar amounts on private tools are blurred.</span>
+  <span>built with claude code · oct 2026</span>
+</footer>
+</div>
+
+<div class="tip" id="tip" hidden></div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="image viewer">
+  <img id="lbimg" alt="">
+  <div class="lbbar"><button type="button" id="lbprev">prev</button><span id="lbcap"></span><button type="button" id="lbnext">next</button><button type="button" id="lbclose">close</button></div>
+</div>
+
+<script src="demos/dropgate.js"></script>
+<script src="demos/engine.js"></script>
+<script src="demos/cashdeck.js"></script>
+<script src="demos/orchestra.js"></script>
+<script src="demos/trading.js"></script>
+<script src="demos/preorder.js"></script>
+<script>
+const BUILDS = [
+{
+  id:"dropgate", demo:"dropgate", name:"drop gate", kind:"real-time web app", year:"jun 2026",
+  status:["built","built and load-tested, not run on a real drop yet"],
+  one:"a live waiting line for drop day. you hold your spot by staying, climb by bringing friends, and get let in to shop in timed waves.",
+  thumb:{phone:["dropgate-join","dropgate-line","dropgate-chat"]},
+  shots:[["dropgate-join","join with a name and a phone number","ph"],["dropgate-line","the line, running against my fake-crowd script","ph"],["dropgate-chat","live chat for everyone in line","ph"],["dropgate-admin","operator panel: freeze, force open, seal the door, mute",""]],
+  why:"on drop day thousands of people hit the site at once. the site chokes, bots win, and the hype is gone in minutes. i wanted the wait itself to be the event, and to turn the crowd into new text subscribers.",
+  how:["sign in with a texted code. your rank is points: +1 every second you stay, +300 for every friend you bring.","when the door opens, people go in by rank in 5 minute shopping windows with signed entry tokens, then get sent straight into the shopify collection.","rate limits per phone, per ip and per chat user. referral speed caps so nobody farms points.","the chat filter sees through spelling tricks like sc4m or s c a m and quietly mutes people. they still see their own messages, so they don't come back with a new account."],
+  nums:[["2,583","people in line at once with 0 failures, on a $5/month server"],["4,127","people in chat at ~700 messages a second"],["64","automated tests"],["80","commits in 10 days"]],
+  lesson:"my load test tool silently skipped its setup step on socket connections, so a green test could be testing nothing. i caught it and added a check that every simulated user really got in.",
+  stack:["node","express","socket.io","postgres","artillery","railway"]
+},
+{
+  id:"engine", demo:"engine", name:"content engine", kind:"ml pipeline", year:"may–oct 2026",
+  status:["live","in use · instagram data paused since aug 1 when the api token expired"],
+  one:"cuts short videos out of raw footage, then reads instagram results to learn what actually gets reach.",
+  thumb:{img:"engine-reels"},
+  shots:[["engine-reels","reels it made, with their real instagram numbers. the last three are from the newest version, oct 2026",""],["engine-tags","the contact sheet the visual tagger reads to label every clip",""]],
+  why:"one person can't edit five videos a day and run a brand. and i wanted to stop guessing what works.",
+  how:["pulls every reel's numbers from instagram's official read-only api, over and over as the reel ages.","a vision model tags each clip: which garment, what kind of shot, what color.","three models predict views, watch time and completion from those tags. two ai judges (one for the brand, one playing a gen z viewer) score a video before it gets rendered.","everything gets logged so i can test one change at a time instead of following rules."],
+  nums:[["802","reels tracked"],["21.6M","views across those reels"],["12,110","metric snapshots"],["4,761","clip tags"],["82–89%","visual tagger accuracy on garment, shot and color"],["p 0.005","models beat chance on held-out reels"]],
+  lesson:"the data killed my favorite theory. two people on screen looked like a reach multiplier on 8 reels and fell apart at 386. what actually holds: reach follows a power law driven by watch time and a person wearing the clothes. the models only explain part of it, and my own posts drove most of the follower growth, not the engine. i'd rather know that.",
+  stack:["python","fastapi","sqlite","instagram graph api","open_clip","scikit-learn","ffmpeg","elevenlabs"]
+},
+{
+  id:"cashdeck", demo:"cashdeck", name:"cash deck", kind:"finance tool", year:"sep 2026",
+  status:["live","in use · syncs every morning at 6"],
+  one:"shows my cash across every account and every bill coming, and simulates week by week whether a drop leaves enough money to survive.",
+  thumb:{img:"cash-timeline"},
+  shots:[["cash-timeline","cash by week. grey is what happened, blue is what the model expects, dashed red is my floor. real numbers blurred.",""]],
+  why:"in 2026 my problem wasn't sales, it was timing. factories want deposits weeks before customers pay, so you can be selling well and still run out of cash. i got close. i built this in two days so it doesn't happen again.",
+  how:["read-only connections to shopify, the bank and meta ads. it can see money, it can't move it.","every upcoming payment and payout on one calendar, with the cash left after each one.","a planner that chains drops together and finds the most stock i can make ahead without cash going under the floor."],
+  nums:[["2 days","from first commit to running"],["67","automated tests"],["49,037","ledger rows"],["$0","difference vs my hand-built cash plan"]],
+  stack:["python","flask","sqlite","shopify graphql","plaid","meta ads api"]
+},
+{
+  id:"retouch", name:"photo pipeline", kind:"image processing", year:"sep 2026",
+  status:["live","shipped · on the live product pages since sep 28"],
+  one:"turns one phone photo of a garment on the floor into clean product images in every colorway, with no reshoot.",
+  thumb:{img:"retouch-grey",contain:true},
+  ba:true,
+  why:"a proper shoot for every colorway costs money and weeks. i had one photo of black sweats on paper and needed grey, black and burgundy on the site the same day.",
+  how:["cuts the garment out. i tested two models and picked the one that didn't punch holes in the sleeves.","reads white balance off the grey fabric, because the paper backdrop is warm and lies.","recolors by matching measured color values from real garments, so burgundy is the real burgundy.","upscales only the detailed areas, because the ai upscaler invents stripes on plain fleece."],
+  nums:[["1","photo in"],["3","colorways out"],["7","scripts, ~470 lines"]],
+  stack:["python","opencv","numpy","rembg","real-esrgan"]
+},
+{
+  id:"orchestra", demo:"orchestra", name:"sales orchestra", kind:"live visualizer", year:"jun 2026",
+  status:["built","built · shown here in replay mode"],
+  one:"a drop day screen where every order becomes a bloom of light and a sound. bigger order, bigger bloom.",
+  thumb:{img:"orchestra"},
+  shots:[["orchestra","replay mode, simulated orders",""]],
+  why:"shopify's numbers lag on drop day. i wanted to feel the drop live, and give the room something to watch.",
+  how:["asks shopify for new orders every 5 seconds and only requests id, total and time. no customer data ever touches it.","replay mode plays back a past drop as a 6 minute arc.","milestone flares from $5k up, and a compressor on the audio so 50 orders a second still sounds good."],
+  nums:[["5s","order refresh"],["0","customer fields requested"],["1","html file"]],
+  stack:["bun","canvas","web audio"]
+},
+{
+  id:"trading", demo:"trading", name:"trading research", kind:"research system", year:"apr–sep 2026",
+  status:["killed","shut down by its own rules · nothing made real money"],
+  one:"a research system that tests trading ideas the hard way, then kills them when they fail.",
+  thumb:{text:"funnel"},
+  funnel:true,
+  why:"at 16 i lost money gambling on prop-firm trading. the second time, i wanted proof before money.",
+  how:["before any test, the rules are written down: hidden holdout data, entries on the next bar only, real fees, and the exact numbers that would kill the idea.","i wrote claude code skills that refuse to build a backtest that breaks those rules, and an agent whose only job is to assume every result is contaminated.","a monte carlo simulator for prop-firm rules, so a strategy has to survive the firm's drawdown limits, not just make money on paper.","every claim that got overturned stays in the vault with a write-up of why. ten of them so far."],
+  nums:[["~210k","ideas tested across 3 mining runs"],["6","survived every gate"],["70","research notes, 10 overturned and kept"],["0.79","profit factor on 40 forward trades. under 1 means it loses."]],
+  lesson:"the flagship looked like ~$13k on paper. five months of forward testing said it loses. the kill rule i wrote before it started fired, so i shut it down. that's the system working.",
+  stack:["python","pandas","databento","flask","sqlite","claude code agents"]
+},
+{
+  id:"jarvis", name:"jarvis", kind:"desktop app", year:"apr–jun 2026",
+  status:["built","built · personal use"],
+  one:"a desktop assistant in my menu bar. i whistle, it wakes up. it knows my notes and can do things on my mac.",
+  thumb:{img:"jarvis",contain:true,dark:true},
+  shots:[["jarvis","idle, listening for the whistle","mid"]],
+  why:"i think best out loud. i wanted something i could talk to that already knew my business.",
+  how:["27 tools: search my notes, open apps, take screenshots, type, change volume, and hand long jobs to a background claude code session that writes back a result.","wakes on a whistle. it records your whistle once and matches against it.","spar mode argues against my ideas and is told to never give in. when i'm done it writes a summary into my notes.","a kill switch hotkey, because it can type on my computer."],
+  nums:[["27","tools"],["~3,900","lines"]],
+  stack:["electron","claude api","whisper","openai tts"]
+},
+{
+  id:"preorder", demo:"preorder", name:"preorder tracker", kind:"live on the store", year:"may 2026",
+  status:["live","live on v2byvelare.com"],
+  one:"customers type their order number and email and see where each item is in production.",
+  thumb:{phone:["preorder"]},
+  shots:[["preorder","the live page on the store","ph"]],
+  link:["https://v2byvelare.com/pages/preorder-tracker","open the live page"],
+  why:"preorders mean waiting, and waiting means hundreds of where's-my-order messages.",
+  how:["a cloudflare worker reads a google sheet my team updates with production stages.","the email has to match the order, and a wrong guess gets a vague error, so nobody can fish for someone else's order.","a shopify custom app with the required privacy webhooks for data requests and deletion."],
+  nums:[["274","lines"],["60s","sheet cache"]],
+  stack:["cloudflare workers","google sheets api","shopify"]
+},
+{
+  id:"nightshift", name:"the night shift", kind:"agents + automation", year:"2026",
+  status:["live","runs every night"],
+  one:"ai agents and scheduled jobs that research, pull data and plan while i sleep. plus the memory they all read from.",
+  thumb:{text:"night"},
+  night:true,
+  why:"i'm one person. the only way to have a research team, an analyst and a planner is to build them.",
+  how:["a 4 hour scout loop every night hunts for ways to make money, digs into the best ones, and writes me the top 3 by morning.","a second brain: 457 notes about the business, written for ai to read, re-indexed automatically every time a session starts.","a content research library agents built themselves: 614 notes in 5 days over 56 rounds, including skeptic rounds that go back and re-check earlier claims.","15 claude code skills i wrote, like garment tech packs for factories, drop planning with monte carlo, and a 100-voice decision arena."],
+  nums:[["8","scheduled jobs"],["457","notes in the second brain"],["614","notes in the content library"],["15","custom skills"]],
+  stack:["claude code","launchd","bun","markdown","rclone"]
+},
+{
+  id:"signaller", name:"signaller", kind:"first build", year:"jan–apr 2026",
+  status:["","retired · it was practice"],
+  one:"my first build. watches tiktok for sounds and trends spreading through fashion creators before they peak, then writes a content brief.",
+  thumb:{text:"pipe"},
+  pipe:true,
+  why:"trends move fast and i kept finding them late.",
+  how:["first commit jan 23 2026, two days after i first used claude code.","scrapes, scores against a taxonomy, runs a brand safety check, writes a brief with claude, sends an alert to my phone.","i wrote a business plan to sell it to brands for $499 a month, then dropped it to focus on v2. good practice."],
+  nums:[["~10.4k","lines"],["77","tests"],["8","database migrations"]],
+  stack:["python","supabase","postgres + pgvector","apify","claude api"]
+},
+{
+  id:"staysync", demo:"staysync", name:"stay sync theme", kind:"shopify theme", year:"oct 2026",
+  status:["built","built · handed to my brother, not launched yet"],
+  one:"a shopify theme for my brother's first brand. two products, an arcade feel, built for a drop.",
+  thumb:{img:"staysync-home"},
+  shots:[["staysync-home","home",""],["staysync-pass","the drop page before launch",""]],
+  why:"he was about to launch with a template. i wanted his first drop to look like his.",
+  how:["two-product drop layout, a countdown password page and a text sign-up popup.","a free shipping progress bar and a low stock bar that only shows real stock. no fake urgency for a teen audience.","passes shopify's theme check with 0 errors. v1.1 shipped a day later from his feedback."],
+  nums:[["0","theme check errors"],["~5.6k","lines"]],
+  stack:["shopify liquid","css","javascript"]
+},
+{
+  id:"sites", name:"sites + experiments", kind:"design range", year:"2026",
+  status:["","concepts"],
+  one:"smaller pieces: a password page for v2 and a concept redesign for a bakery in my town.",
+  thumb:{img:"menotti-pass"},
+  shots:[["menotti-pass","coming soon page for a v2 store test",""],["redbarn","concept redesign for a local bakery. unsolicited, not their real site.",""]],
+  why:"range. not everything i make should look like my brand.",
+  how:["the password page counts down to a drop and collects numbers.","the bakery concept is warm serif type and nothing like streetwear, on purpose."],
+  nums:[],
+  stack:["shopify liquid","html","css"]
+}
+];
+
+const DROPS = [
+  {name:"velare · drop 1", date:"aug 2024", big:"2 of 100", text:"my first drop. i made 100 pieces and sold 2. i kept going anyway, and the old brand grew to $10–22k months.", imgs:[]},
+  {name:"layer 0 · noire", date:"summer 2025", big:"$747k", text:"the original 6: black and grey hoodie, sweats and set. still about 60% of everything i've ever sold.", imgs:[["brand-01","black noire hoodie"],["brand-02","grey noire hoodie"],["brand-03","grey noire set"]]},
+  {name:"layer 02 · molten", date:"dec 19 2025", big:"$213.6k month", text:"dropped on my 18th birthday. the new pieces flopped, the old ones carried it, and it was my best month ever. that taught me more than a hit would have.", imgs:[["brand-04","grey noire zip-up"],["brand-05","molten longsleeve"]]},
+  {name:"layer 03 · denim", date:"mar 2026", big:"$22.5k day one", text:"first denim. the cheetah stripe runs down the leg like on the hoodies.", imgs:[["brand-06","black noire denim"],["brand-07","grey noire denim"],["brand-08","apex denim"]]},
+  {name:"layer 04", date:"may 16 2026", big:"$45k day one", text:"colorways, shorts, cargos and the rainline windbreaker. my best drop day, with $0 spent on ads.", imgs:[["brand-09","burgundy noire hoodie"],["brand-10","brown noire hoodie"],["brand-11","navy noire hoodie"],["brand-12","maroon noire sweats"],["brand-13","rainline windbreaker"]]},
+  {name:"layer 05", date:"sep 11 2026", big:"15 pieces", text:"anorak, boots, camo noire. too many new pieces at once, so i cut the line back to the winners. now drops are smaller and premade.", imgs:[["brand-14","anorak jacket"],["brand-15","grey camo noire hoodie"],["brand-16","alpine boots"]]}
+];
+
+const TIMELINE = [
+  ["aug 2024","first drop as velare. 100 made, 2 sold."],
+  ["nov 2024","a video goes from 10k to 1.2m views. first $10k month."],
+  ["feb 2025","write a free guide for other young founders. it becomes a group chat of 250+."],
+  ["jun 2025","relaunch as v2byvelare."],
+  ["jul 2025","$138k month."],
+  ["sep 2025","talk at nyu stern on using ai in startup marketing."],
+  ["dec 2025","best month: $213.6k, 2,501 orders."],
+  ["jan 2026","first time using claude code. first repo two days later."],
+  ["feb 2026","organize a group popup during new york fashion week."],
+  ["may 2026","layer 04: $45k in one day with $0 on ads."],
+  ["jun 2026","finish high school. build drop gate in 10 days."],
+  ["sep 2026","build cash deck in 2 days. cut the line to only the winners."],
+  ["2026","adidas releases a cheetah stripe placed the way i place mine."],
+  ["nov 2026","going to china to meet factories in person.","next"]
+];
+
+// monthly total sales, $k. velare store then v2 store (shopify exports)
+const REV = [
+  ["2024-08",.3,0],["2024-09",0,0],["2024-10",2.1,0],["2024-11",10.3,0],["2024-12",4.8,0],
+  ["2025-01",13.6,0],["2025-02",10.0,0],["2025-03",11.3,0],["2025-04",16.0,0],["2025-05",22.3,0],
+  ["2025-06",8.2,1.5],["2025-07",6.0,138.2],["2025-08",0,139.3],["2025-09",0,94.1],["2025-10",0,76.6],
+  ["2025-11",0,97.1],["2025-12",0,213.6],["2026-01",0,76.9],["2026-02",0,19.9],["2026-03",0,67.6],
+  ["2026-04",0,23.2],["2026-05",0,87.2],["2026-06",0,41.4],["2026-07",0,55.9],["2026-08",0,41.5],["2026-09",0,85.6]
+];
+const NOTES = {"2024-08":"first drop","2024-11":"first $10k","2025-06":"v2 relaunch","2025-12":"best month","2026-05":"layer 04"};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MON = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+const fmtM = k => { const [y,m] = k.split("-"); return MON[+m-1] + " " + y; };
+
+/* ---------- cards ---------- */
+function thumbHTML(b){
+  const t = b.thumb;
+  if (t.phone) return `<div class="thumb phone">${t.phone.map(p=>`<img src="img/${p}.jpg" alt="" loading="lazy">`).join("")}</div>`;
+  if (t.text === "funnel") return `<div class="thumb text">${funnelMini()}</div>`;
+  if (t.text === "night") return `<div class="thumb text">${nightMini()}</div>`;
+  if (t.text === "pipe") return `<div class="thumb text"><div class="pipe"><span>tiktok</span><i>→</i><span>score</span><i>→</i><span>brand safety</span><i>→</i><span>ai brief</span><i>→</i><span>phone alert</span></div></div>`;
+  const st = t.contain ? `style="object-fit:contain;background:${t.dark?'#000':'#fff'}"` : "";
+  return `<div class="thumb"${t.dark?' style="background:#000"':''}><img src="img/${t.img}.jpg" alt="" loading="lazy" ${st}></div>`;
+}
+function statusHTML(s){ return `<span class="status ${s[0]}">${esc(s[1].split(" · ")[0])}</span>`; }
+function renderGrid(){
+  $("#grid").innerHTML = BUILDS.map(b => `
+    <a class="card" href="#${b.id}">
+      ${thumbHTML(b)}
+      <div class="body">
+        <div class="row"><h3>${esc(b.name)}</h3><span class="eyebrow">${esc(b.year)}</span></div>
+        <p>${esc(b.one)}</p>
+        <div class="meta"><span class="tag">${esc(b.kind)}</span>${b.demo?'<span class="tag play">playable</span>':''}${statusHTML(b.status)}</div>
+      </div>
+    </a>`).join("");
+}
+
+/* ---------- small diagrams ---------- */
+function funnelMini(){
+  const rows=[["ideas tested","~210,000",100],["survived every gate","6",14],["made real money","0",0]];
+  return `<div style="width:100%;max-width:300px;display:grid;gap:9px;font-family:var(--mono);font-size:11.5px">${rows.map(r=>`
+    <div><div style="display:flex;justify-content:space-between;color:var(--ink-2)"><span>${r[0]}</span><b style="color:var(--ink);font-weight:500">${r[1]}</b></div>
+    <div style="height:8px;background:var(--rule-2);border-radius:2px;margin-top:4px"><div style="height:100%;width:${r[2]}%;background:${r[2]?'var(--ink)':'transparent'};border-radius:2px"></div></div></div>`).join("")}</div>`;
+}
+function nightMini(){
+  let s = `<svg viewBox="0 0 300 120" style="width:100%;max-width:320px" role="img" aria-label="nightly job schedule">`;
+  s += `<rect x="0" y="0" width="300" height="120" fill="none"/>`;
+  const x = h => 10 + h/24*280;
+  [0,6,12,18,24].forEach(h=>{ s+=`<line x1="${x(h)}" x2="${x(h)}" y1="18" y2="96" stroke="var(--rule)" stroke-width="1"/><text x="${x(h)}" y="112" text-anchor="middle" style="fill:var(--ink-3);font-family:var(--mono);font-size:10px">${h===0||h===24?'12a':h===12?'12p':h<12?h+'a':(h-12)+'p'}</text>`; });
+  s += `<rect x="${x(1)}" y="24" width="${x(5)-x(1)}" height="12" rx="2" fill="var(--red)"/>`;
+  [[3,44],[4.25,58],[6,72]].forEach(([h,y])=>{ s+=`<rect x="${x(h)-2}" y="${y}" width="4" height="10" rx="1" fill="var(--ink)"/>`; });
+  [0,4,8,12,16,20].forEach(h=>{ s+=`<rect x="${x(h)-1.5}" y="86" width="3" height="8" rx="1" fill="var(--ink-3)"/>`; });
+  return s + `</svg>`;
+}
+
+/* ---------- detail ---------- */
+function renderDetail(id){
+  const i = BUILDS.findIndex(b=>b.id===id), b = BUILDS[i];
+  const prev = BUILDS[(i-1+BUILDS.length)%BUILDS.length], next = BUILDS[(i+1)%BUILDS.length];
+  let media = "";
+  if (b.shots) media = `<div class="gallery" id="gal">${b.shots.map((s,k)=>`
+      <figure class="${s[2]}"><button class="shot" type="button" data-lb="${k}"><img src="img/${s[0]}.jpg" alt="${esc(s[1])}" loading="lazy"></button><figcaption>${esc(s[1])}</figcaption></figure>`).join("")}</div>
+      ${b.shots.length>1?'<span class="hint">scroll sideways · click to enlarge</span>':'<span class="hint">click to enlarge</span>'}`;
+  if (b.ba) media = baHTML();
+  if (b.funnel) media = funnelChart();
+  if (b.night) media = nightChart();
+  if (b.pipe) media = `<div class="chart"><div class="cap"><b>the pipeline</b><span class="legend">runs on a schedule, alerts my phone</span></div><div class="pipe" style="justify-content:flex-start;font-size:13px;padding:10px 0"><span>scrape tiktok</span><i>→</i><span>score vs taxonomy</span><i>→</i><span>brand safety check</span><i>→</i><span>claude writes a brief</span><i>→</i><span>alert</span></div></div>`;
+  $("#v-detail").innerHTML = `
+    <a class="back" href="#builds">← all builds</a>
+    <div class="dhead">
+      <span class="eyebrow">${esc(b.kind)} · ${esc(b.year)}</span>
+      <h1>${esc(b.name)}</h1>
+      <p class="lede">${esc(b.one)}</p>
+      <div class="row"><span class="status ${b.status[0]}">${esc(b.status[1])}</span>${b.link?`<a class="ext" href="${b.link[0]}" target="_blank" rel="noopener">${esc(b.link[1])} ↗</a>`:""}</div>
+    </div>
+    ${b.demo?`<div class="try"><div class="tryhead"><span class="eyebrow">try it</span><span class="hint">${esc(DEMO_NOTE[b.demo]||"")}</span></div><div class="trybox" id="demo"></div></div>`:""}
+    ${media}
+    <div class="cols">
+      <div class="prose">
+        <h4>why i built it</h4><p>${esc(b.why)}</p>
+        <h4>how it works</h4><ul>${b.how.map(h=>`<li>${esc(h)}</li>`).join("")}</ul>
+        ${b.lesson?`<h4>what i learned</h4><p class="note">${esc(b.lesson)}</p>`:""}
+      </div>
+      <div class="side">
+        ${b.nums.length?`<h4>numbers</h4><ul class="nums">${b.nums.map(n=>`<li><b>${esc(n[0])}</b><span>${esc(n[1])}</span></li>`).join("")}</ul>`:""}
+        <h4>built with</h4><div class="stack">${b.stack.map(s=>`<span class="tag">${esc(s)}</span>`).join("")}</div>
+      </div>
+    </div>
+    <div class="pager"><a href="#${prev.id}">← ${esc(prev.name)}</a><a href="#${next.id}">${esc(next.name)} →</a></div>`;
+  CURRENT_SHOTS = b.shots ? b.shots.map(s=>["img/"+s[0]+".jpg",s[1]]) : [];
+  if (b.demo) mountDemo(b.demo);
+  if (b.ba) wireBA();
+  if (b.funnel) wireFunnel();
+}
+
+const DEMO_NOTE = {
+  dropgate:"a simulated crowd of 150, running the real line rules and chat filter. try typing sc4m in chat.",
+  engine:"real view counts from 603 of my reels. nothing else exported: no captions, no accounts.",
+  cashdeck:"my real cash model, with sample numbers. move the sliders, then hit solve.",
+  orchestra:"replay of a $45k drop with simulated orders. turn your sound on.",
+  trading:"the real prop-firm rules, 2,000 simulated attempts. compare the backtest to how it actually traded.",
+  preorder:"same rules as the live tracker, with sample orders.",
+  staysync:"the real theme files. browse only, the cart needs shopify."
+};
+function mountDemo(id){
+  const el=$("#demo");
+  if (id==="staysync"){
+    el.innerHTML=`<div class="chips" role="group" aria-label="page" style="padding:12px"><button type="button" class="chip" aria-pressed="true" data-p="index">home</button><button type="button" class="chip" aria-pressed="false" data-p="password">drop page</button></div><iframe class="tryframe" src="demos/staysync/index.html" title="stay sync theme preview" loading="lazy"></iframe>`;
+    el.querySelector(".chips").addEventListener("click",e=>{const b=e.target.closest("button"); if(!b) return; el.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b)); el.querySelector("iframe").src=`demos/staysync/${b.dataset.p}.html`;});
+    return;
+  }
+  if (window.DEMOS && window.DEMOS[id]) { try { window.DEMOS[id](el); } catch(err){ el.innerHTML='<p class="hint" style="padding:16px">this demo failed to load. the screenshots below show it.</p>'; } }
+}
+
+/* before / after */
+const COLORS = [["grey","#9a9c9b"],["black","#151515"],["burgundy","#6e1830"]];
+function baHTML(){
+  return `<div class="ba">
+    <figure><div class="frame"><img src="img/retouch-raw.jpg" alt="the original phone photo: black sweats on paper on the floor"></div><figcaption>before: one phone photo on the floor</figcaption></figure>
+    <figure><div class="frame"><img id="baimg" src="img/retouch-grey.jpg" alt="cleaned product image in grey"></div><figcaption id="bacap">after: grey, generated from the black pair</figcaption></figure>
+  </div>
+  <div class="chips" id="bachips" role="group" aria-label="colorway" style="padding-top:14px">${COLORS.map((c,k)=>`<button type="button" class="chip" aria-pressed="${k===0}" data-c="${c[0]}"><i style="background:${c[1]}"></i>${c[0]}</button>`).join("")}</div>`;
+}
+function wireBA(){
+  $("#bachips").addEventListener("click", e=>{
+    const b = e.target.closest("button"); if(!b) return;
+    document.querySelectorAll("#bachips .chip").forEach(x=>x.setAttribute("aria-pressed", x===b));
+    const c = b.dataset.c;
+    $("#baimg").src = `img/retouch-${c}.jpg`; $("#baimg").alt = `cleaned product image in ${c}`;
+    $("#bacap").textContent = c==="black" ? "after: black, cleaned and cut out" : `after: ${c}, generated from the black pair`;
+  });
+}
+
+/* trading funnel: log scale */
+function funnelChart(){
+  const W=760, rowH=46, pad=170, rows=[["ideas tested","~210,000",210000],["passed every gate","6",6],["forward test profitable","0",0]];
+  const lx = v => v<=0 ? 0 : (Math.log10(v)/Math.log10(210000))*(W-pad-70);
+  let s=`<svg viewBox="0 0 ${W} ${rows.length*rowH+30}" role="img" aria-label="from about 210,000 ideas, 6 passed every gate, 0 were profitable in forward testing">`;
+  [1,10,100,1000,10000,100000].forEach(t=>{ const X=pad+lx(t); s+=`<line x1="${X}" x2="${X}" y1="4" y2="${rows.length*rowH}" stroke="var(--rule-2)"/><text x="${X}" y="${rows.length*rowH+18}" text-anchor="middle">${t>=1000?(t/1000)+'k':t}</text>`; });
+  rows.forEach((r,k)=>{ const y=k*rowH+10, w=Math.max(lx(r[2]), r[2]>0?3:0);
+    s+=`<text x="0" y="${y+17}" style="fill:var(--ink-2);font-size:12px">${r[0]}</text>`;
+    if (w) s+=`<rect x="${pad}" y="${y+4}" width="${w}" height="20" rx="2" fill="${k===0?'var(--bar-a)':'var(--ink)'}"/>`;
+    else s+=`<line x1="${pad}" x2="${pad}" y1="${y+2}" y2="${y+26}" stroke="var(--red)" stroke-width="2"/>`;
+    s+=`<text x="${pad+w+8}" y="${y+18}" style="fill:${w?'var(--ink)':'var(--red)'};font-size:13px;font-weight:500">${r[1]}</text>`; });
+  s+=`</svg>`;
+  return `<div class="chart"><div class="cap"><b>the kill funnel</b><span class="legend">log scale · 3 mining runs, apr 2026</span></div>${s}</div>
+  <div class="chart"><div class="cap"><b>flagship strategy: paper vs reality</b><span class="legend">5 months forward testing, apr → sep 2026</span></div>
+    <div id="pvr"></div></div>`;
+}
+function wireFunnel(){
+  const W=760,H=120,mid=W*.42, sc=(W-mid-60)/13000;
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="backtest implied about plus 13,000 dollars, forward testing lost 795 dollars in fees">`;
+  s+=`<line x1="${mid}" x2="${mid}" y1="6" y2="${H-14}" stroke="var(--ink-3)"/>`;
+  s+=`<text x="0" y="36" style="fill:var(--ink-2);font-size:12px">what the backtest implied</text><rect x="${mid}" y="20" width="${13000*sc}" height="24" rx="2" fill="var(--bar-a)"/><text x="${mid+13000*sc+8}" y="37" style="fill:var(--ink);font-size:13px">+$13k</text>`;
+  s+=`<text x="0" y="86" style="fill:var(--ink-2);font-size:12px">what forward testing did</text><rect x="${mid-795*sc}" y="70" width="${795*sc}" height="24" rx="2" fill="var(--red)"/><text x="${mid+8}" y="87" style="fill:var(--red);font-size:13px">−$795 in fees · killed</text>`;
+  $("#pvr").innerHTML = s+`</svg>`;
+}
+
+/* night shift */
+function nightChart(){
+  const W=760, L=150, R=20, jobs=[
+    ["money scout loop",[[1,5]],"var(--red)","1am–5am every night. hunt, dig in, write the top 3"],
+    ["shopify data pull",[[3]],"var(--ink)","3am"],
+    ["video tagging",[[4.25]],"var(--ink)","4:15am"],
+    ["cash sync",[[6]],"var(--ink)","6am"],
+    ["engine metrics",[[0],[4],[8],[12],[16],[20]],"var(--ink-3)","every 4 hours"],
+    ["backups to drive",[[0],[6],[12],[18]],"var(--ink-3)","every 6 hours"],
+    ["creative hunt",[[5.5]],"var(--amber)","sundays 5:30am"],
+    ["weekly digest",[[18]],"var(--amber)","sundays 6pm"]];
+  const rh=28, H=jobs.length*rh+34, x=h=>L+h/24*(W-L-R);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="schedule of automated jobs across 24 hours">`;
+  s+=`<rect x="${x(0)}" y="0" width="${x(7)-x(0)}" height="${jobs.length*rh}" fill="var(--rule-2)"/>`;
+  [0,3,6,9,12,15,18,21,24].forEach(h=>{ s+=`<line x1="${x(h)}" x2="${x(h)}" y1="0" y2="${jobs.length*rh}" stroke="var(--rule)"/><text x="${x(h)}" y="${jobs.length*rh+16}" text-anchor="middle">${h%12===0?'12'+(h===12?'p':'a'):(h%12)+(h<12?'a':'p')}</text>`; });
+  jobs.forEach((j,k)=>{ const y=k*rh+6;
+    s+=`<text x="0" y="${y+12}" style="fill:var(--ink-2);font-size:12px">${j[0]}</text>`;
+    j[1].forEach(p=>{ s+= p.length===2 ? `<rect class="hov" data-t="${j[0]}: ${j[3]}" x="${x(p[0])}" y="${y+1}" width="${x(p[1])-x(p[0])}" height="14" rx="2" fill="${j[2]}"/>` : `<rect class="hov" data-t="${j[0]}: ${j[3]}" x="${x(p[0])-3}" y="${y+1}" width="6" height="14" rx="1.5" fill="${j[2]}"/>`; }); });
+  s+=`</svg>`;
+  return `<div class="chart"><div class="cap"><b>what runs while i sleep</b><span class="legend"><span><i style="background:var(--rule-2);border:1px solid var(--rule)"></i>while i'm asleep</span><span><i style="background:var(--amber)"></i>weekly</span></span></div>${s}</div>`;
+}
+
+/* revenue chart */
+function renderRev(){
+  const W=900,H=300,L=44,B=40,T=26,max=220, n=REV.length, bw=(W-L-8)/n;
+  const y=v=>T+(H-T-B)*(1-v/max);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="monthly sales from august 2024 to september 2026, peaking at 213.6 thousand dollars in december 2025">`;
+  [0,50,100,150,200].forEach(v=>{ s+=`<line x1="${L}" x2="${W}" y1="${y(v)}" y2="${y(v)}" stroke="var(--rule-2)"/><text x="${L-8}" y="${y(v)+4}" text-anchor="end">$${v}k</text>`; });
+  REV.forEach((r,i)=>{ const x=L+i*bw+2, w=bw-4, a=r[1], b=r[2];
+    if (a>0) s+=`<rect x="${x}" y="${y(a)}" width="${w}" height="${y(0)-y(a)}" fill="var(--bar-a)" rx="1.5"/>`;
+    if (b>0) s+=`<rect x="${x}" y="${y(a+b)}" width="${w}" height="${y(a)-y(a+b)}" fill="var(--bar-b)" rx="1.5"/>`;
+    s+=`<rect class="hov" data-t="${fmtM(r[0])}: $${(a+b).toFixed(1)}k" x="${x-2}" y="${T}" width="${bw}" height="${H-T-B}" fill="transparent"/>`;
+    if (r[0].endsWith("-01")||i===0) s+=`<text x="${x+w/2}" y="${H-B+18}" text-anchor="middle">${r[0].slice(0,4)}</text>`;
+    if (NOTES[r[0]]) { const top=y(a+b)-8; s+=`<text x="${x+w/2}" y="${Math.min(top,y(0)-8)}" text-anchor="middle" style="fill:var(--ink-2);font-size:10.5px">${NOTES[r[0]]}</text>`; }
+  });
+  s+=`</svg>`;
+  $("#revchart").innerHTML = `<div class="cap"><b>sales by month</b><span class="legend"><span><i style="background:var(--bar-a)"></i>velare (first brand)</span><span><i style="background:var(--bar-b)"></i>v2byvelare</span></span></div>${s}<span class="hint">shopify total sales, aug 2024 to sep 2026. hover for each month. 2026 is down from 2025, which is why i started building the systems.</span>`;
+}
+
+/* clothes */
+function renderDrops(){
+  let all=[];
+  $("#drops").innerHTML = DROPS.map(d=>{
+    const imgs = d.imgs.map(im=>{ all.push(["img/"+im[0]+".jpg",d.name+" · "+im[1]]); return `<button type="button" data-lbc="${all.length-1}"><img src="img/${im[0]}.jpg" alt="${esc(im[1])}" loading="lazy"></button>`; }).join("");
+    return `<article class="drop"><div class="info"><span class="eyebrow">${esc(d.date)}</span><h3>${esc(d.name)}</h3><div class="big">${esc(d.big)}</div><p>${esc(d.text)}</p></div>
+      ${imgs?`<div class="strip">${imgs}</div>`:""}</article>`;
+  }).join("");
+  CLOTHES_SHOTS = all;
+}
+function renderTimeline(){
+  $("#timeline").innerHTML = TIMELINE.map(t=>`<li class="${t[2]||''}"><time>${t[2]?'next · ':''}${esc(t[0])}</time><span>${esc(t[1])}</span></li>`).join("");
+}
+
+/* ---------- home: filling stage ---------- */
+const PH = [["32", 1.333, "kenya \u00b7 dec 2023"], ["35", 1.333, "kenya \u00b7 dec 2023"], ["46", 1.779, "feb 2024"], ["50", 1.056, "the first name"], ["28", 1.897, "drawing the name \u00b7 feb 2024"], ["39", 0.524, "first tech drawing \u00b7 mar 2024"], ["51", 0.752, "the first sample \u00b7 jun 2024"], ["05", 1.333, "building the site \u00b7 jun 2024"], ["49", 0.856, "velare designs \u00b7 2024"], ["17", 1.333, "oct 2024"], ["16", 1.779, "printing orders \u00b7 feb 2025"], ["31", 1.779, "feb 2025"], ["06", 1.779, "mar 2025"], ["53", 1.785, "packing"], ["07", 1.779, "apr 2025"], ["08", 1.779, "apr 2025"], ["09", 1.779, "apr 2025"], ["41", 1.333, "jun 2025"], ["40", 1.026, "jun 2025"], ["36", 1.333, "jun 2025"], ["10", 1.779, "jun 2025"], ["37", 1.334, "jun 2025"], ["38", 1.334, "jun 2025"], ["23", 1.332, "production"], ["11", 1.333, "aug 2025"], ["54", 0.461, "los angeles"], ["24", 0.739, "new york"], ["12", 1.333, "dec 2025"], ["13", 1.333, "dec 2025"], ["03", 1.333, "packaging"], ["14", 1.333, "fashion week \u00b7 feb 2026"], ["47", 1.011, "10,000 orders in 12 months"], ["52", 1.07, "the first store"], ["01", 1.333, "mar 2026"], ["15", 1.333, "mar 2026"], ["33", 1.333, "layer 04 drop day \u00b7 may 2026"], ["34", 1.333, "may 2026"], ["02", 1.333, "jun 2026"], ["04", 1.333, "10,000 orders \u00b7 jul 2026"], ["48", 1.782, "$1.08M in 12 months"], ["42", 1.779, "jul 2026"], ["44", 1.779, "jul 2026"], ["19", 1.333, "jul 2026"], ["20", 1.333, "jul 2026"], ["21", 1.333, "jul 2026"], ["18", 1.333, "jul 2026"], ["27", 1.333, "samples"], ["29", 1.333, "samples"], ["30", 1.333, "samples"], ["22", 1.332, "shoot"], ["25", 1.332, "shoot"], ["26", 1.332, "shoot"], ["43", 0.714, "aug 2026"]];
+const BELIEFS = [[0, "", "in a world where all answers are free, the questions are what matter.", "jun 3 2026"], [5, "", "in the beginning, i confused motion with progress.", "college essay · oct 19 2025"], [10, "", "the beautiful truth is that there is no right time, and thats beautiful because it means that today is the best day to start.", "recording for my course · aug 12 2026"], [15, "", "im not gonna spend another minute in the passenger seat of my own life.", "the night i chose not to go to college · apr 28 2026"], [20, "", "i stopped trying to rely on my pieces to do the selling, and started relying on making people remember me.", "voice memo · aug 13 2026"], [25, "", "a conversion is when desire beats doubt.", "voice memo · aug 13 2026"], [30, "", "think about how it could work before you think about how it couldn't.", "voice memo · aug 13 2026"], [35, "", "outliers should be the most analyzed, not averaged away.", "designing my content engine · jun 4 2026"], [40, "", "bridges aren't built for yourself; they're for others. i'd have no reason to build one if it didn't connect to someone on the other side.", "college essay · oct 2025"], [45, "", "leadership isn't about having the loudest voice; it's about building spaces where everyone feels heard.", "college essay · oct 2025"], [52, "", "the next following years in this world will value originality and human ingenuity, something irreplaceable.", "school journal · 2026"]];
+let STORY_SHOTS = PH.map(p=>["img/g/"+p[0]+".jpg",p[2]]);
+function renderStory(){
+  const stage=$("#stage"), wrap=$("#stagewrap"), N=PH.length;
+  const rnd=(i,s)=>{ const x=Math.sin(i*12.9898+s*78.233)*43758.5453; return x-Math.floor(x); };
+  const T = PH.map((p,i)=> i<2 ? 0 : .86*Math.pow((i-1)/(N-2),.62));   // a couple at first, then a quick flood
+  const els = PH.map((p,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="sp"; b.dataset.lbs=i; b.style.zIndex=10+i;
+    b.innerHTML=`<img alt="${esc(p[2])}" decoding="async">`; stage.appendChild(b); return b; });
+  let placed=[];
+  function layout(){
+    const W=stage.clientWidth, H=stage.clientHeight, mob=W<700; placed=[];
+    PH.forEach((p,i)=>{
+      const f=i/(N-1), w = Math.min(W*(mob ? .46-.18*f : .21-.09*f), H*(mob?.42:.5)/p[1]), h = w*p[1];
+      let best=null, bestD=-1;
+      for(let c=0;c<26;c++){
+        const cx = w/2 + rnd(i,c+7)*(W-w), cy = h*.35 + 40 + rnd(i,c+41)*(H-h*.7-60);
+        const inMid = Math.abs(cx-W/2) < (mob? W*.40 : 300) && Math.abs(cy-H*.52) < (mob? 140 : 150);
+        let d = placed.reduce((m,q)=>Math.min(m,Math.hypot(q[0]-cx,q[1]-cy)),1e9);
+        if (inMid && f<.75) d*=.25;
+        if (d>bestD){ bestD=d; best=[cx,cy]; }
+      }
+      placed.push(best);
+      const e=els[i]; e.style.width=w+"px"; e.style.height=h+"px";
+      e.style.setProperty("--x",(best[0]-w/2)+"px"); e.style.setProperty("--y",(best[1]-h/2)+"px");
+      e.style.setProperty("--r",((rnd(i,3)-.5)*(mob?8:10)).toFixed(2)+"deg");
+    });
+  }
+  let bi=-1;
+  function tick(){
+    const r=wrap.getBoundingClientRect(), span=wrap.offsetHeight-innerHeight;
+    const prog=Math.min(1,Math.max(0,-r.top/span));
+    els.forEach((e,i)=>{ if (prog>=T[i]-.06 && !e.firstChild.src) e.firstChild.src="img/g/"+PH[i][0]+".jpg"; e.classList.toggle("on", prog>=T[i]); });
+    let k=0; BELIEFS.forEach((b,j)=>{ if(prog>=(b[0]>=N-1?.96:T[b[0]])) k=j; });
+    if (k!==bi){ bi=k; const bx=$("#bbox"); bx.classList.add("swap"); setTimeout(()=>{ $("#byr").textContent=""; $("#btext").textContent="“"+BELIEFS[k][2]+"”"; $("#bsrc").textContent="said: "+BELIEFS[k][3]; bx.classList.remove("swap"); }, bi===0&&!$("#btext").textContent?0:220); }
+  }
+  layout(); tick();
+  let raf=0; addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(()=>{ raf=0; tick(); }); },{passive:true});
+  addEventListener("resize",()=>{ layout(); tick(); });
+  $("#wall").innerHTML = PH.map((p,i)=>`<button type="button" data-lbs="${i}"><img src="img/g/${p[0]}.jpg" alt="${esc(p[2])}" loading="lazy" style="aspect-ratio:1/${p[1]}"></button>`).join("");
+  window.__layoutStage = ()=>{ layout(); tick(); };
+}
+/* lightbox */
+let CURRENT_SHOTS=[], CLOTHES_SHOTS=[], LB_SET=[], LB_I=0, LB_RET=null;
+function openLB(set,i){ LB_SET=set; LB_I=i; LB_RET=document.activeElement; showLB(); $("#lb").hidden=false; $("#lbclose").focus(); }
+function showLB(){ const [src,cap]=LB_SET[LB_I]; $("#lbimg").src=src; $("#lbimg").alt=cap; $("#lbcap").textContent=cap+"  ·  "+(LB_I+1)+"/"+LB_SET.length; $("#lbprev").hidden=$("#lbnext").hidden=LB_SET.length<2; }
+function closeLB(){ $("#lb").hidden=true; if (LB_RET) LB_RET.focus(); }
+$("#lbclose").onclick=closeLB;
+$("#lbprev").onclick=()=>{ LB_I=(LB_I-1+LB_SET.length)%LB_SET.length; showLB(); };
+$("#lbnext").onclick=()=>{ LB_I=(LB_I+1)%LB_SET.length; showLB(); };
+$("#lb").addEventListener("click",e=>{ if(e.target.id==="lb") closeLB(); });
+document.addEventListener("keydown",e=>{ if($("#lb").hidden) return; if(e.key==="Escape") closeLB(); if(e.key==="ArrowRight") $("#lbnext").click(); if(e.key==="ArrowLeft") $("#lbprev").click(); });
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-lb]"); if(a){ openLB(CURRENT_SHOTS,+a.dataset.lb); return; }
+  const c=e.target.closest("[data-lbc]"); if(c){ openLB(CLOTHES_SHOTS,+c.dataset.lbc); return; }
+  const ab=e.target.closest("[data-lba]"); if(ab){ openLB([["img/brand-01.jpg","v2byvelare noire hoodie · summer 2025"],["img/adi-1.jpg","adidas · 2026"],["img/adi-2.jpg","adidas · the sleeve"],["img/brand-10.jpg","v2byvelare brown noire · may 2026"],["img/adi-3.jpg","adidas · 2026"]],+ab.dataset.lba); return; }
+  const sb=e.target.closest("[data-lbs]"); if(sb){ openLB(STORY_SHOTS,+sb.dataset.lbs); return; }
+  const rr=e.target.closest("[data-lbr]"); if(rr){ openLB([["img/room.jpg","the course app"]],0); return; }
+  const cp=e.target.closest("[data-copy]"); if(cp){
+    const done=()=>{ cp.textContent="copied"; setTimeout(()=>cp.textContent="copy",1600); };
+    try { navigator.clipboard.writeText(cp.dataset.copy).then(done,()=>selectEmail()); } catch(err){ selectEmail(); }
+  }
+});
+function selectEmail(){ const r=document.createRange(); r.selectNodeContents($("#email")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+/* chart tooltips */
+const tip=$("#tip");
+document.addEventListener("pointermove",e=>{
+  const h=e.target.closest && e.target.closest(".hov");
+  if(!h){ tip.hidden=true; return; }
+  tip.textContent=h.dataset.t; tip.hidden=false;
+  const x=Math.min(e.clientX+12, innerWidth-tip.offsetWidth-8);
+  tip.style.left=x+"px"; tip.style.top=(e.clientY-34)+"px";
+});
+
+/* routing */
+function route(){
+  let h=(location.hash||"#home").slice(1);
+  if (h==="work") h="builds"; if (h==="clothes"||h==="brand") h="ventures";
+  const views={home:"#v-home",ventures:"#v-ventures",builds:"#v-builds",about:"#v-about",community:"#v-community"};
+  const isBuild=BUILDS.some(b=>b.id===h);
+  const tab = isBuild ? "builds" : (views[h] ? h : "home");
+  document.querySelectorAll("section.view").forEach(v=>v.hidden=true);
+  if (isBuild){ renderDetail(h); $("#v-detail").hidden=false; }
+  else $(views[tab]).hidden=false;
+  document.querySelectorAll("nav.tabs a").forEach(a=>{ if(a.dataset.tab===tab) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  window.scrollTo(0,0);
+  if (tab==="home" && window.__layoutStage) requestAnimationFrame(window.__layoutStage);
+}
+renderStory(); renderGrid(); renderRev(); renderDrops(); renderTimeline();
+addEventListener("hashchange",route); route();
+</script>
+
+</body></html>

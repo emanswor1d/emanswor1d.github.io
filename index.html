@@ -343,26 +343,21 @@ a.vrow:hover b{color:var(--red-ink)}
 @media (max-width:560px){.hero{height:calc(100svh - 92px)}}
 @keyframes heroin{from{transform:scale(1.08);filter:brightness(.7)}to{transform:scale(1);filter:none}}
 @media (prefers-reduced-motion:reduce){.hero img{animation:none}}
-/* home: one screen that fills with photos as you scroll, beliefs swap in the middle, then the full wall */
+/* home: one screen that fills with photos as you scroll, era by era, with one quote per era in the middle */
 .gh{display:grid;gap:18px;justify-items:center;text-align:center;padding:clamp(40px,9vw,120px) 0 clamp(20px,4vw,40px)}
 .gh h1{max-width:16ch}
 .gh .r{color:var(--red)}
-.stagewrap{height:420vh;width:100vw;margin-left:calc(50% - 50vw);position:relative}
+.stagewrap{height:900vh;width:100vw;margin-left:calc(50% - 50vw);position:relative}
 .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
 .sp{position:absolute;left:0;top:0;padding:0;border:0;background:var(--shot-bg);border-radius:3px;overflow:hidden;cursor:zoom-in;box-shadow:0 18px 40px -22px rgba(0,0,0,.6);opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(.62);transition:opacity .55s ease,transform .75s cubic-bezier(.2,.9,.25,1.15);will-change:transform}
 .sp.on{opacity:1;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1)}
 .sp img{width:100%;height:100%;object-fit:cover}
 .bbox{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);z-index:900;display:grid;gap:12px;justify-items:center;text-align:center;width:min(560px,86vw);padding:22px 26px;border-radius:6px;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:opacity .4s ease}
 .bbox.swap{opacity:0}
-.bbox .bsrc{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
 .bbox .yr:empty{display:none}
 .bbox .yr{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--red-ink)}
 .gbelief{font-family:var(--display);font-weight:800;font-stretch:112%;letter-spacing:-.02em;line-height:1.08;font-size:clamp(22px,3vw,38px);text-wrap:balance;margin:0}
-.wall{columns:4 220px;column-gap:12px;padding-top:clamp(40px,6vw,80px)}
-.wall button{display:block;width:100%;margin:0 0 12px;padding:0;border:0;border-radius:3px;overflow:hidden;background:var(--shot-bg);cursor:zoom-in;break-inside:avoid}
-.wall img{width:100%;height:auto}
 .gend{display:grid;gap:18px;padding-block:clamp(40px,6vw,80px) 20px}
-@media (prefers-reduced-motion:reduce){.stagewrap{display:none}}
 
 .tag.play{color:var(--red-ink);border-color:color-mix(in srgb,var(--red) 45%,var(--rule))}
 .try{padding-top:28px;display:grid;gap:10px}
@@ -427,8 +422,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);display
         <span class="scrollcue">scroll ↓</span>
       </div>
     </div>
-    <div class="stagewrap" id="stagewrap"><div class="stage" id="stage"><div class="bbox" id="bbox"><span class="yr" id="byr"></span><p class="gbelief" id="btext"></p><span class="bsrc" id="bsrc"></span></div></div></div>
-    <div class="wall" id="wall"></div>
+    <div class="stagewrap" id="stagewrap"><div class="stage" id="stage"><div class="bbox" id="bbox"><span class="yr" id="byr"></span><p class="gbelief" id="btext"></p></div></div></div>
     <div class="gend">
       <div class="homegrid">
         <a class="hblock" href="#ventures"><img src="img/brand-09.jpg" alt="" loading="lazy"><span class="eyebrow">ventures</span><b>$1.29M</b><span>v2byvelare, since june 2025</span></a>
@@ -1032,12 +1026,13 @@ function renderTimeline(){
 
 /* ---------- home: filling stage ---------- */
 const PH = [["32", 1.333, "kenya \u00b7 dec 2023"], ["35", 1.333, "kenya \u00b7 dec 2023"], ["46", 1.779, "feb 2024"], ["50", 1.056, "the first name"], ["28", 1.897, "drawing the name \u00b7 feb 2024"], ["39", 0.524, "first tech drawing \u00b7 mar 2024"], ["51", 0.752, "the first sample \u00b7 jun 2024"], ["05", 1.333, "building the site \u00b7 jun 2024"], ["49", 0.856, "velare designs \u00b7 2024"], ["17", 1.333, "oct 2024"], ["16", 1.779, "printing orders \u00b7 feb 2025"], ["31", 1.779, "feb 2025"], ["06", 1.779, "mar 2025"], ["53", 1.785, "packing"], ["07", 1.779, "apr 2025"], ["08", 1.779, "apr 2025"], ["09", 1.779, "apr 2025"], ["41", 1.333, "jun 2025"], ["40", 1.026, "jun 2025"], ["36", 1.333, "jun 2025"], ["10", 1.779, "jun 2025"], ["37", 1.334, "jun 2025"], ["38", 1.334, "jun 2025"], ["23", 1.332, "production"], ["11", 1.333, "aug 2025"], ["54", 0.461, "los angeles"], ["24", 0.739, "new york"], ["12", 1.333, "dec 2025"], ["13", 1.333, "dec 2025"], ["03", 1.333, "packaging"], ["14", 1.333, "fashion week \u00b7 feb 2026"], ["47", 1.011, "10,000 orders in 12 months"], ["52", 1.07, "the first store"], ["01", 1.333, "mar 2026"], ["15", 1.333, "mar 2026"], ["33", 1.333, "layer 04 drop day \u00b7 may 2026"], ["34", 1.333, "may 2026"], ["02", 1.333, "jun 2026"], ["04", 1.333, "10,000 orders \u00b7 jul 2026"], ["48", 1.782, "$1.08M in 12 months"], ["42", 1.779, "jul 2026"], ["44", 1.779, "jul 2026"], ["19", 1.333, "jul 2026"], ["20", 1.333, "jul 2026"], ["21", 1.333, "jul 2026"], ["18", 1.333, "jul 2026"], ["27", 1.333, "samples"], ["29", 1.333, "samples"], ["30", 1.333, "samples"], ["22", 1.332, "shoot"], ["25", 1.332, "shoot"], ["26", 1.332, "shoot"], ["43", 0.714, "aug 2026"]];
-const BELIEFS = [[0, "", "in a world where all answers are free, the questions are what matter.", "jun 3 2026"], [5, "", "in the beginning, i confused motion with progress.", "college essay · oct 19 2025"], [10, "", "the beautiful truth is that there is no right time, and thats beautiful because it means that today is the best day to start.", "recording for my course · aug 12 2026"], [15, "", "im not gonna spend another minute in the passenger seat of my own life.", "the night i chose not to go to college · apr 28 2026"], [20, "", "i stopped trying to rely on my pieces to do the selling, and started relying on making people remember me.", "voice memo · aug 13 2026"], [25, "", "a conversion is when desire beats doubt.", "voice memo · aug 13 2026"], [30, "", "think about how it could work before you think about how it couldn't.", "voice memo · aug 13 2026"], [35, "", "outliers should be the most analyzed, not averaged away.", "designing my content engine · jun 4 2026"], [40, "", "bridges aren't built for yourself; they're for others. i'd have no reason to build one if it didn't connect to someone on the other side.", "college essay · oct 2025"], [45, "", "leadership isn't about having the loudest voice; it's about building spaces where everyone feels heard.", "college essay · oct 2025"], [52, "", "the next following years in this world will value originality and human ingenuity, something irreplaceable.", "school journal · 2026"]];
+const BELIEFS = [[0, "the start", "the beautiful truth is that there is no right time, and thats beautiful because it means that today is the best day to start."], [5, "2024", "in the beginning, i confused motion with progress."], [17, "2025", "i stopped trying to rely on my pieces to do the selling, and started relying on making people remember me."], [33, "2026", "im not gonna spend another minute in the passenger seat of my own life."]];
 let STORY_SHOTS = PH.map(p=>["img/g/"+p[0]+".jpg",p[2]]);
 function renderStory(){
   const stage=$("#stage"), wrap=$("#stagewrap"), N=PH.length;
   const rnd=(i,s)=>{ const x=Math.sin(i*12.9898+s*78.233)*43758.5453; return x-Math.floor(x); };
-  const T = PH.map((p,i)=> i<2 ? 0 : .86*Math.pow((i-1)/(N-2),.62));   // a couple at first, then a quick flood
+  const SEG = BELIEFS.map(b=>b[0]).concat([N]), Q = .92/BELIEFS.length;   // each quote gets an equal stretch of scroll
+  const T = PH.map((p,i)=>{ const j=SEG.findIndex((a,k)=>i>=a && i<SEG[k+1]), a=SEG[j], n=SEG[j+1]-a; return j*Q + (i-a)/n*Q*.85; });
   const els = PH.map((p,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="sp"; b.dataset.lbs=i; b.style.zIndex=10+i;
     b.innerHTML=`<img alt="${esc(p[2])}" decoding="async">`; stage.appendChild(b); return b; });
   let placed=[];
@@ -1064,13 +1059,12 @@ function renderStory(){
     const r=wrap.getBoundingClientRect(), span=wrap.offsetHeight-innerHeight;
     const prog=Math.min(1,Math.max(0,-r.top/span));
     els.forEach((e,i)=>{ if (prog>=T[i]-.06 && !e.firstChild.src) e.firstChild.src="img/g/"+PH[i][0]+".jpg"; e.classList.toggle("on", prog>=T[i]); });
-    let k=0; BELIEFS.forEach((b,j)=>{ if(prog>=(b[0]>=N-1?.96:T[b[0]])) k=j; });
-    if (k!==bi){ bi=k; const bx=$("#bbox"); bx.classList.add("swap"); setTimeout(()=>{ $("#byr").textContent=""; $("#btext").textContent="“"+BELIEFS[k][2]+"”"; $("#bsrc").textContent="said: "+BELIEFS[k][3]; bx.classList.remove("swap"); }, bi===0&&!$("#btext").textContent?0:220); }
+    let k=0; BELIEFS.forEach((b,j)=>{ if(prog>=j*Q) k=j; });
+    if (k!==bi){ bi=k; const bx=$("#bbox"); bx.classList.add("swap"); setTimeout(()=>{ $("#byr").textContent=BELIEFS[k][1]; $("#btext").textContent="“"+BELIEFS[k][2]+"”"; bx.classList.remove("swap"); }, bi===0&&!$("#btext").textContent?0:220); }
   }
   layout(); tick();
   let raf=0; addEventListener("scroll",()=>{ if(!raf) raf=requestAnimationFrame(()=>{ raf=0; tick(); }); },{passive:true});
   addEventListener("resize",()=>{ layout(); tick(); });
-  $("#wall").innerHTML = PH.map((p,i)=>`<button type="button" data-lbs="${i}"><img src="img/g/${p[0]}.jpg" alt="${esc(p[2])}" loading="lazy" style="aspect-ratio:1/${p[1]}"></button>`).join("");
   window.__layoutStage = ()=>{ layout(); tick(); };
 }
 /* lightbox */

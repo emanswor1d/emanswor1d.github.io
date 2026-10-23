@@ -6,7 +6,7 @@
 @page{size:letter;margin:0}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:#fff}
-body{width:8.5in;height:11in;padding:.5in .58in .45in;font-family:"Schibsted Grotesk",sans-serif;font-size:9.6pt;line-height:1.38;color:#1a1b1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{width:8.5in;height:11in;padding:.44in .58in .4in;font-family:"Schibsted Grotesk",sans-serif;font-size:9.6pt;line-height:1.38;color:#1a1b1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 a{color:inherit;text-decoration:none}
 header{display:grid;gap:5pt;padding-bottom:11pt;border-bottom:1.5pt solid #111211}
 h1{font-family:"Archivo",sans-serif;font-weight:800;font-stretch:118%;font-size:27pt;letter-spacing:-.025em;line-height:1}
@@ -14,7 +14,7 @@ h1 .r{color:#e1122b}
 .contact{font-family:"IBM Plex Mono",monospace;font-size:8.1pt;color:#4b4f4c;display:flex;flex-wrap:wrap;gap:0 14pt}
 .contact a{border-bottom:.6pt solid #b9beb9}
 .summary{margin-top:10pt;font-size:10pt;color:#2a2c2a;max-width:96%}
-section{margin-top:12pt}
+section{margin-top:10pt}
 h2{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8pt;letter-spacing:.06em;text-transform:lowercase;color:#e1122b;padding-bottom:4pt;margin-bottom:6pt;border-bottom:.6pt solid #dcdfdb}
 .role{display:flex;justify-content:space-between;align-items:baseline;gap:10pt;margin-top:7pt}
 .role:first-of-type{margin-top:0}
@@ -37,22 +37,29 @@ li b{font-weight:600;color:#111211}
     <a href="https://v2byvelare.com">v2byvelare.com</a>
   </div>
 </header>
-<p class="summary">18. Started a clothing brand at 16 with no money, grew it to $1.29M in sales in 16 months with no outside funding, and taught myself to write the software I run it on. Finished high school in June 2026 and chose to build full time instead of going straight to college.</p>
+<p class="summary">Founder of v2byVELARE, a streetwear brand I started at 16. $1.35M in sales since launching in June 2025, now running at $1.2M+ a year. I run the whole business, from product and manufacturing to ads and cash, and taught myself to write the software I run it on. Finished high school in June 2026 and chose to build full time before college.</p>
 
 <section>
   <h2>experience</h2>
   <div class="role"><b>Founder, v2byVELARE <span>(Velare LLC)</span></b><span class="when">June 2025 – Present</span></div>
   <ul>
-    <li>$1.29M in Shopify sales and 14,700+ orders since launch, no outside funding. $138K in the first full month, best month $213K and 2,500+ orders (Dec 2025)</li>
-    <li>Run every part of the business: product design, overseas manufacturing ($240K+ in production in 2026), ads, SMS, fulfillment, cash, and a 3 person contract team</li>
-    <li>Built an 89K follower Instagram and 16K person SMS list, mostly organic, and use them to launch limited drops. Best single day $45K (May 2026)</li>
-    <li>Directed $195K+ in Meta ad spend with an outside agency, set budgets and break-even targets, held around 5x revenue per ad dollar in scale months</li>
-    <li>Used sales data to cut the catalog down to proven winners: the original 6 products drove about 60% of all revenue</li>
+    <li>$1.35M in sales and 15,400+ orders since June 2025, fully bootstrapped. $138K in the first full month, best month $213K and 2,500+ orders (Dec 2025), now running at $1.2M+ a year</li>
+    <li>Run the full operation: product design, overseas manufacturing ($240K+ in production in 2026), paid ads, SMS, fulfillment, cash and a 3 person contract team</li>
+    <li>Built an 89K follower Instagram and 16K SMS list, mostly organic, that power limited drops. Best day $45K</li>
+    <li>Directed $195K+ in Meta ads with an outside agency, holding ~5x revenue per ad dollar in scale months</li>
+  </ul>
+  <div class="role"><b>Head of Growth &amp; Marketing, QuantMap</b><span class="when">Oct 2026 – Present</span></div>
+  <p class="note">Quant analytics platform that maps key price levels on CME futures, crypto and 10K+ US stocks before the open, graded at the close. Seen in Forbes, Business Insider, Yahoo Finance and Investopedia.</p>
+  <ul>
+    <li>Brought in by the founders to own growth end to end: paid acquisition, funnel, tracking, content strategy and the sales team (hiring, scripts and pay for setters and closers)</li>
+    <li>Wrote the go-to-market roadmap in my first two weeks: audited the site, track record and payment risk, mapped 22 competitors, and redesigned the funnel around a live trader-led demo that closes on the call</li>
+    <li>Built the financial models the roadmap runs on: cohort churn, acquisition cost ceilings, operating costs by phase, sales team pay and a path to $1M in monthly revenue</li>
+    <li>Built the new landing pages (one per trader skill level, plus checkout) and the full Meta Pixel + Conversions API tracking spec for the dev team; designed the member referral program</li>
   </ul>
   <div class="role"><b>Founder, VELARE <span>(first brand)</span></b><span class="when">Aug 2024 – July 2025</span></div>
   <ul>
-    <li>Started at 16. First drop sold 2 of 100 units (my mom and a friend). Grew to about $100K in the first year</li>
-    <li>Got through $30K of inventory stuck in customs, then relaunched as v2byVELARE, which did 6x the monthly revenue</li>
+    <li>Started at 16 with no audience. First drop sold 2 of 100 units (my mom and a friend). Grew to about $100K in year one</li>
+    <li>Survived $30K of inventory stuck in customs, then relaunched as v2byVELARE at 6x the monthly revenue</li>
   </ul>
 </section>
 
@@ -60,23 +67,22 @@ li b{font-weight:600;color:#111211}
   <h2>things i built</h2>
   <p class="note">Self-taught with Python and AI coding tools (Claude Code) since January 2026. 12 projects, 40K+ lines of code.</p>
   <ul>
-    <li><b>Drop Gate:</b> real-time waiting line for drop day (Node, Socket.io, Postgres). Load-tested to 2,583 people in line at once with 0 failures on a $5/month server, 64 automated tests</li>
-    <li><b>Content analytics engine:</b> pulls Instagram performance data through the official API on 800+ reels, tags every video, and scores which formats drive reach. Found that reach follows a power law driven by watch time, not the format I assumed</li>
-    <li><b>Cash Deck:</b> live dashboard on the Shopify Payments and Balance APIs showing cash across accounts, upcoming bills, and drop scenarios on a weekly simulator. I run the business off it</li>
-    <li><b>Trading research:</b> backtesting framework with blind holdout tests, cost modeling, and kill rules written before each test. Tested ~210K ideas; the flagship looked like +$13K on paper, lost in 5 months of forward testing, and was killed by its own predeclared rule</li>
-    <li><b>Personal AI system:</b> a structured knowledge base and agents that plan, research, and track the business overnight</li>
+    <li><b>Content engine:</b> an AI system that learns what makes short-form video spread, then makes it. Tracks every one of my 800+ reels live through the official Instagram API and, with a partner, 104K+ posts across 403 brands. Writes, voices and edits new videos, with a panel of AI viewers grading every cut before it posts. Where it's going: organic content you can optimize for reach, clicks or sales the way Meta optimizes ads</li>
+    <li><b>Drop Gate:</b> virtual queue so drops never crash. Load-tested to 2,583 shoppers at once, 0 failures, $5/month server</li>
+    <li><b>Cash Deck:</b> the system I run v2's money on. Syncs 44K+ Shopify Payments transactions, simulates cash week by week, and sizes every production order to the cash we'll have</li>
+    <li><b>Quant research:</b> backtester to catch fake edges (blind holdouts, real costs, preset kill rules), ~210K ideas screened</li>
+    <li><b>AI operating system:</b> 13 always-on agents and a 590+ note knowledge base that rank new revenue moves nightly</li>
   </ul>
 </section>
 
 <section>
   <h2>other</h2>
   <ul>
-    <li>Started Execution Group, a community of 250+ young clothing brand founders that grew out of free guides I wrote on organic marketing. Still active daily without me</li>
-    <li>Wrote a full course for new brand founders: 71 videos, about 32K words</li>
+    <li>Started Execution Group, a 250+ member community of young brand founders, and wrote a 71-video founder course</li>
     <li>Spoke at NYU Stern (Sep 2025) on using AI in startup marketing</li>
     <li>Paid model and creator for 12+ streetwear brands; organized a group popup during NYFW (Feb 2026)</li>
-    <li>Given away $57K+ in clothing at retail value, about 800 pieces: 250+ to shelters and youth programs, 400 at one giveaway</li>
-    <li>Irvington High School, graduated June 2026. Admitted to Northeastern. Varsity soccer 4 years, piano 10 years, fluent Spanish</li>
+    <li>Given away $57K+ in clothing (about 800 pieces), 250+ to shelters and youth programs</li>
+    <li>Irvington High School, June 2026. Admitted to Northeastern. Varsity soccer 4 yrs, piano 10 yrs, fluent Spanish</li>
   </ul>
 </section>
 </body></html>

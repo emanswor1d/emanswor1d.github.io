@@ -426,7 +426,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);display
     <div class="gend">
       <div class="homegrid">
         <a class="hblock" href="#ventures"><img src="img/brand-09.jpg" alt="" loading="lazy"><span class="eyebrow">ventures</span><b>$1.35M</b><span>v2byvelare, since june 2025</span></a>
-        <a class="hblock" href="#builds"><img src="img/dropgate-line.jpg" alt="" loading="lazy" style="object-position:top"><span class="eyebrow">builds</span><b>12</b><span>systems the brand runs on. most are playable</span></a>
+        <a class="hblock" href="#builds"><img src="img/dropgate-line.jpg" alt="" loading="lazy" style="object-position:top"><span class="eyebrow">builds</span><b>13</b><span>systems the brand runs on. most are playable</span></a>
         <a class="hblock" href="#community"><img src="img/g/12.jpg" alt="" loading="lazy"><span class="eyebrow">community</span><b>250+</b><span>young founders helping each other</span></a>
       </div>
     </div>
@@ -437,7 +437,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);display
       <div class="herotext"><span class="eyebrow">builds · since january 2026</span><h1>every problem the business had, i built something for<span class="r">.</span></h1>
       <p class="lede">i taught myself with ai coding tools. the ones marked playable run right here in your browser.</p></div></div>
     <div class="gridhead">
-      <h2>12 builds</h2>
+      <h2>13 builds</h2>
       <span class="hint">click any card</span>
     </div>
     <div class="grid" id="grid"></div>
@@ -521,6 +521,7 @@ footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--rule);display
         <div class="vrow"><span class="yr">2024–25</span><b>velare</b><p>the first brand. $104k in sales and 1,420 orders. it taught me what v2 does differently.</p></div>
         <a class="vrow" href="#community"><span class="yr">2025–now</span><b>execution group</b><p>a free community of 250+ young founders helping each other. →</p></a>
         <div class="vrow"><span class="yr">2023–now</span><b>creator work</b><p>paid model and creator for 12+ streetwear brands, 1,000+ posts.</p></div>
+        <div class="vrow"><span class="yr">2026</span><b>quantmap</b><p>helping friends relaunch their trading analytics software: the growth plan, the ad funnel and the new site.</p></div>
         <a class="vrow" href="#engine"><span class="yr">2026</span><b>content engine for other brands</b><p>packaging my content engine with a partner so other brands can use it. early, no customers yet. →</p></a>
         <a class="vrow" href="#signaller"><span class="yr">2026</span><b>signaller</b><p>tried selling my trend tool to brands at $499 a month. dropped it to focus on v2. →</p></a>
       </div>
@@ -741,14 +742,25 @@ const BUILDS = [
   stack:["cloudflare workers","google sheets api","shopify"]
 },
 {
+  id:"csdrafter", name:"cs drafter", kind:"support agent", year:"oct 2026",
+  status:["live","live · drafts every 5 minutes"],
+  one:"reads every new support email and drafts the reply in the v2 voice, with the real order details. my team edits and sends.",
+  thumb:{steps:["new email","order facts","draft in v2 voice","team edits","sent"]},
+  flow:["customer email comes in","pulls the order from shopify, read only","claude drafts in our reply book voice","checks it for banned promises","team edits and sends"],
+  why:"support is where a drop brand loses people. a 3 person team was writing the same answers all day, and every rushed reply risked promising something we can't control.",
+  how:["every 5 minutes it checks the help desk for tickets where the customer spoke last.","it looks up their order in shopify (read only, no customer data stored) so the draft has the real status and dates.","the draft follows a reply book i wrote with the team: our voice, realistic dates, never approving a refund on its own.","a checker blocks banned phrases and redrafts once. drafts land as internal notes, so nothing reaches a customer without a person sending it."],
+  nums:[["5 min","between checks"],["20","drafts on the first run, 0 errors"],["0","messages sent without a person"]],
+  stack:["python","claude code","gorgias api","shopify","launchd"]
+},
+{
   id:"nightshift", name:"the night shift", kind:"agents + automation", year:"2026",
   status:["live","runs every night"],
   one:"ai agents and scheduled jobs that research, pull data and plan while i sleep. plus the memory they all read from.",
   thumb:{text:"night"},
   night:true,
   why:"i'm one person. the only way to have a research team, an analyst and a planner is to build them.",
-  how:["a 4 hour scout loop every night hunts for ways to make money, digs into the best ones, and writes me the top 3 by morning.","a second brain: 457 notes about the business, written for ai to read, re-indexed automatically every time a session starts.","a content research library agents built themselves: 614 notes in 5 days over 56 rounds, including skeptic rounds that go back and re-check earlier claims.","15 claude code skills i wrote, like garment tech packs for factories, drop planning with monte carlo, and a 100-voice decision arena."],
-  nums:[["8","scheduled jobs"],["457","notes in the second brain"],["614","notes in the content library"],["15","custom skills"]],
+  how:["a 4 hour scout loop every night hunts for ways to make money, digs into the best ones, and writes me the top 3 by morning.","an ops analyst: every morning at 8 it reads cash, sales and new first-time buyers and sends my phone the state of the business in 3 lines, plus what to act on.","a discord bot that runs the creator program: it messages a creator the moment they make a sale, and keeps their dashboard, ranks and streaks.","a second brain: 802 notes about the business, written for ai to read, re-indexed automatically every time a session starts.","a content research library agents built themselves: 1,943 notes and counting, including skeptic rounds that go back and re-check earlier claims.","18 claude code skills i wrote, like garment tech packs for factories, drop planning with monte carlo, and a 100-voice decision arena."],
+  nums:[["17","jobs and services running"],["802","notes in the second brain"],["1,943","notes in the content library"],["18","custom skills"]],
   stack:["claude code","launchd","bun","markdown","rclone"]
 },
 {
@@ -833,6 +845,7 @@ function thumbHTML(b){
   if (t.phone) return `<div class="thumb phone">${t.phone.map(p=>`<img src="img/${p}.jpg" alt="" loading="lazy">`).join("")}</div>`;
   if (t.text === "funnel") return `<div class="thumb text">${funnelMini()}</div>`;
   if (t.text === "night") return `<div class="thumb text">${nightMini()}</div>`;
+  if (t.steps) return `<div class="thumb text"><div class="pipe">${t.steps.map(esc).map(x=>`<span>${x}</span>`).join("<i>→</i>")}</div></div>`;
   if (t.text === "pipe") return `<div class="thumb text"><div class="pipe"><span>tiktok</span><i>→</i><span>score</span><i>→</i><span>brand safety</span><i>→</i><span>ai brief</span><i>→</i><span>phone alert</span></div></div>`;
   const st = t.contain ? `style="object-fit:contain;background:${t.dark?'#000':'#fff'}"` : "";
   return `<div class="thumb"${t.dark?' style="background:#000"':''}><img src="img/${t.img}.jpg" alt="" loading="lazy" ${st}></div>`;
@@ -879,6 +892,7 @@ function renderDetail(id){
   if (b.ba) media = baHTML();
   if (b.funnel) media = funnelChart();
   if (b.night) media = nightChart();
+  if (b.flow) media = `<div class="chart"><div class="cap"><b>the flow</b><span class="legend">a person sends every reply</span></div><div class="pipe" style="justify-content:flex-start;font-size:13px;padding:10px 0">${b.flow.map(esc).map(x=>`<span>${x}</span>`).join("<i>→</i>")}</div></div>`;
   if (b.pipe) media = `<div class="chart"><div class="cap"><b>the pipeline</b><span class="legend">runs on a schedule, alerts my phone</span></div><div class="pipe" style="justify-content:flex-start;font-size:13px;padding:10px 0"><span>scrape tiktok</span><i>→</i><span>score vs taxonomy</span><i>→</i><span>brand safety check</span><i>→</i><span>claude writes a brief</span><i>→</i><span>alert</span></div></div>`;
   $("#v-detail").innerHTML = `
     <a class="back" href="#builds">← all builds</a>
@@ -978,6 +992,8 @@ function nightChart(){
     ["shopify data pull",[[3]],"var(--ink)","3am"],
     ["video tagging",[[4.25]],"var(--ink)","4:15am"],
     ["cash sync",[[6]],"var(--ink)","6am"],
+    ["ops report",[[8]],"var(--ink)","8am, straight to my phone"],
+    ["creator bot",[[0,24]],"var(--ink-3)","always on"],
     ["engine metrics",[[0],[4],[8],[12],[16],[20]],"var(--ink-3)","every 4 hours"],
     ["backups to drive",[[0],[6],[12],[18]],"var(--ink-3)","every 6 hours"],
     ["creative hunt",[[5.5]],"var(--amber)","sundays 5:30am"],
